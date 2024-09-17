@@ -5,6 +5,7 @@ atsphinx-bulma
 .. toctree::
    :hidden:
 
+   theme
    changes
 
 Overview

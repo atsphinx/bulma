@@ -2,6 +2,11 @@
 atsphinx-bulma
 ==============
 
+.. toctree::
+   :hidden:
+
+   changes
+
 Overview
 ========
 

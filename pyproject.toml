@@ -30,7 +30,7 @@ classifiers = [
 ]
 readme = "README.rst"
 dependencies = [
-    "sphinx",
+    "sphinx>=7.3.0",
 ]
 
 [project.entry-points."sphinx.html_themes"]

@@ -34,7 +34,7 @@ dependencies = [
 ]
 
 [project.entry-points."sphinx.html_themes"]
-bulma-basic = "atsphinx.bulma.themes.basic"
+bulma_basic = "atsphinx.bulma.themes.bulma_basic"
 
 [project.urls]
 Home = "https://github.com/atsphinx/bulma"

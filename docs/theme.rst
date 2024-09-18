@@ -2,7 +2,7 @@
 Using theme
 ===========
 
-``bulma-basic``
+``bulma_basic``
 ===============
 
 Options

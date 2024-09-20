@@ -2,28 +2,39 @@
 atsphinx-bulma
 ==============
 
-.. toctree::
-   :hidden:
-
-   theme
-   changes
-
 Overview
 ========
 
-.. todo:: Write it
+atsphinx-bulma is Sphinx extension for html-based builder to improve contents by Bulma.
 
 Installation
 ============
 
-.. todo:: Write it
+.. note:: It does not work yet.
 
-Usage
-=====
+   You can install from PyPI by your package manager.
 
-.. todo:: Write it
+   .. code-block:: console
 
-Configuration
-=============
+      pip install atsphinx-bulma
+   
+   .. code-block:: console
 
-.. todo:: Write it
+      uv add atsphinx-bulma
+
+Features and usage
+==================
+
+.. toctree::
+   :maxdepth: 2
+
+   theme
+
+.. todo::
+
+   Require docs for components and widgets.
+
+.. toctree::
+   :hidden:
+   
+   changes

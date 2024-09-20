@@ -20,6 +20,11 @@ footer.footer, div.footer {
   padding-bottom: 2rem;
 }
 
+/* For contents */
+section {
+  padding: 1rem 0.5rem;
+}
+
 /* For permalink icon */
 .headerlink {
   font-size: 50%;

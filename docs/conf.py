@@ -22,3 +22,7 @@ html_theme_options = {
 }
 html_title = f"{project} v{release}"
 html_static_path = ["_static"]
+
+# -- Options for extensions
+# sphinx.ext.todo
+todo_include_todos = True

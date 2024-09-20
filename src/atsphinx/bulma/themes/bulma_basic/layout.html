@@ -1,0 +1,48 @@
+{% extends "basic/layout.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <script src="{{ pathto('_static/theme.js', 1) }}"></script>
+{% endblock %}
+
+{%- block header %}
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="{{ pathto(root_doc)|e }}">
+      {{ docstitle }}
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="site-navbar">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="site-navbar" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+      </a>
+    </div>
+
+    <div class="navbar-end">
+    </div>
+  </div>
+</nav>
+{% endblock %}
+
+{%- block relbar1 %}{% endblock %}
+
+{%- block content %}
+<main>
+  <div class="section">
+    <div class="content">
+    {% block document %}
+    {{ body }}
+    {% endblock %}
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+{%- block relbar2 %}{% endblock %}

@@ -8,4 +8,4 @@ here = Path(__file__).parent
 
 
 def setup(app: Sphinx):  # noqa: D103
-    app.add_html_theme("bulma_basic", str(here))
+    app.add_html_theme("bulma-basic", str(here))

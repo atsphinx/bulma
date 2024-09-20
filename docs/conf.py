@@ -14,7 +14,7 @@ templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 # -- Options for HTML output
-html_theme = "bulma_basic"
+html_theme = "bulma-basic"
 html_theme_options = {
     "bulmaswatch": "pulse",
 }

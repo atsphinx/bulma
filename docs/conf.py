@@ -1,3 +1,5 @@
+"""Configuration for documents."""
+
 from atsphinx.bulma import __version__ as version
 
 # -- Project information

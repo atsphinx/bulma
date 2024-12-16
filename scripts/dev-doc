@@ -1,3 +1,0 @@
-#!/bin/sh
-
-sphinx-autobuild -b dirhtml docs docs/_build/dirhtml $@

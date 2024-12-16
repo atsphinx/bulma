@@ -52,6 +52,8 @@ dev-dependencies = [
     "sphinx-autobuild",
     "sphinx-intl",
     "atsphinx-mini18n",
+    "lefthook>=1.9.2",
+    "mypy>=1.13.0",
 ]
 
 [tool.ruff.lint]

@@ -17,7 +17,7 @@ Installation
    .. code-block:: console
 
       pip install atsphinx-bulma
-   
+
    .. code-block:: console
 
       uv add atsphinx-bulma
@@ -36,5 +36,5 @@ Features and usage
 
 .. toctree::
    :hidden:
-   
+
    changes

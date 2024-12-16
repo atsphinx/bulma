@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v2
+      - uses: jdx/mise-action@v2
       - name: Build package
         run: |
           uv build
@@ -51,7 +51,7 @@ jobs:
         with:
           user: __token__
           password: ${{ secrets.PYPI_API_TOKEN }}
-  deploy-doc:
+  deploy-docs:
     needs: [build]
     runs-on: ubuntu-latest
     permissions:
@@ -62,11 +62,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v2
-      - name: Run tests
+      - uses: jdx/mise-action@v2
+      - name: 'Build docs'
         run: |
-          uv sync --frozen
-          uv run make -C docs dirhtml
+          task setup
+          task docs:build-dirhtml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

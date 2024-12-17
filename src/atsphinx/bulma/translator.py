@@ -14,4 +14,4 @@ class BulmaTranslator(HTML5Translator):  # noqa: D101
 def setup(app: Sphinx):  # noqa: D103
     app.set_translator("html", BulmaTranslator)
     app.set_translator("dirhtml", BulmaTranslator)
-    pass
+    app.setup_extension("atsphinx.bulma.components.messages")

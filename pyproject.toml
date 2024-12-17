@@ -55,6 +55,7 @@ dev-dependencies = [
     "atsphinx-mini18n",
     "lefthook>=1.9.2",
     "mypy>=1.13.0",
+    "types-docutils>=0.21.0.20241128",
 ]
 
 [tool.ruff.lint]

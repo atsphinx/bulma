@@ -1,6 +1,6 @@
 """Translator for messages (from admonition)."""
 
-from typing import TypedDict
+from typing import Optional, TypedDict
 
 from docutils import nodes
 from sphinx.application import Sphinx
@@ -44,7 +44,9 @@ DEFAULT_MESSAGE_CLASSES: MessageClassMap = {
 }
 
 
-def visit_admonition(self: HTML5Translator, node: nodes.admonition, name: str = ""):  # noqa: D103
+def visit_admonition(  # noqa: D103
+    self: HTML5Translator, node: nodes.admonition, name: str = ""
+) -> None:
     message_classes: MessageClassMap = self.builder.app.config.bulma_message_classes
     fallback_class = self.builder.app.config.bulma_message_fallback
     if isinstance(node.children[0], nodes.title):
@@ -62,7 +64,9 @@ def visit_admonition(self: HTML5Translator, node: nodes.admonition, name: str = 
     self.body.append('  <div class="message-body">')
 
 
-def depart_admonition(self: HTML5Translator, node: nodes.admonition):  # noqa: D103
+def depart_admonition(
+    self: HTML5Translator, node: Optional[nodes.admonition] = None
+) -> None:  # noqa: D103
     self.body.append("  </div>")
     self.body.append("</article>")
 

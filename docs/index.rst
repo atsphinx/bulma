@@ -29,6 +29,7 @@ Features and usage
    :maxdepth: 2
 
    theme
+   components/index
 
 .. todo::
 

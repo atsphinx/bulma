@@ -64,9 +64,9 @@ def visit_admonition(  # noqa: D103
     self.body.append('  <div class="message-body">')
 
 
-def depart_admonition(
+def depart_admonition(  # noqa: D103
     self: HTML5Translator, node: Optional[nodes.admonition] = None
-) -> None:  # noqa: D103
+) -> None:
     self.body.append("  </div>")
     self.body.append("</article>")
 

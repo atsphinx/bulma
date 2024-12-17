@@ -7,11 +7,11 @@ from .components import messages
 
 
 class BulmaTranslator(HTML5Translator):  # noqa: D101
-    def visit_admonition(self, element, name=""):
-        messages.visit_admonition(self, element, name)
+    def visit_admonition(self, node, name=""):
+        messages.visit_admonition(self, node, name)
 
-    def depart_admonition(self, element=None):
-        messages.depart_admonition(self, element)
+    def depart_admonition(self, node=None):
+        messages.depart_admonition(self, node)
 
 
 def setup(app: Sphinx):  # noqa: D103

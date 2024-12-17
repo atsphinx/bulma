@@ -9,11 +9,11 @@ tasks:
     desc: 'Setup workspace'
     cmds:
       - 'uv sync --frozen --all-extras'
-      - '{{.RUN_PYTHON}} lefthook install'
+      - 'lefthook install'
   verify:
     desc: 'Verify environment by all procs'
     cmds:
-      - '{{.RUN_PYTHON}} lefthook run pre-commit --all-files'
+      - 'lefthook run pre-commit --all-files'
       - '{{.RUN_PYTHON}} pytest'
       - task: 'docs:intl'
       - task: 'docs:build-linkcheck'

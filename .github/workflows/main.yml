@@ -20,7 +20,7 @@ jobs:
           task setup
       - name: Lint by pre-commit
         run: |
-          uv run lefthook run pre-commit --all-files
+          lefthook run pre-commit --all-files
   source-test:
     runs-on: ubuntu-latest
     strategy:

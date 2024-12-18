@@ -7,6 +7,10 @@ from .components import messages
 
 
 class BulmaTranslator(HTML5Translator):  # noqa: D101
+    def visit_table(self, node):
+        node.set_class("table")
+        super().visit_table(node)
+
     def visit_admonition(self, node, name=""):
         messages.visit_admonition(self, node, name)
 

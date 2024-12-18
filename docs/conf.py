@@ -18,6 +18,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # -- Options for HTML output
 html_theme = "bulma-basic"
 html_theme_options = {
+    "color_mode": "light",
     "bulmaswatch": "pulse",
 }
 html_title = f"{project} v{release}"

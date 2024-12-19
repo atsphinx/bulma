@@ -33,8 +33,12 @@
 
 {%- block relbar1 %}{% endblock %}
 
+{% block body_tag %}
+  <body {% if theme_color_mode in ("light", "dark") %}data-theme="{{ theme_color_mode }}"{% endif %}>
+{% endblock %}
+
 {%- block content %}
-<main {% if theme_color_mode in ("light", "dark") %}data-theme="{{ theme_color_mode }}"{% endif %}>
+<main>
   <div class="section">
     <div class="content">
     {% block document %}

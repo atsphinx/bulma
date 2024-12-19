@@ -30,3 +30,21 @@ section {
   font-size: 50%;
   vertical-align: top;
 }
+
+/* For fotnotes */
+aside.footnote-list {
+  aside.footnote {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    span.label {
+      flex-shrink: 0;
+      margin-right: 0.5rem;
+    }
+    p {
+      margin: 0;
+      white-space: pre-wrap;
+      overflow-wrap: break-word;
+    }
+  }
+}

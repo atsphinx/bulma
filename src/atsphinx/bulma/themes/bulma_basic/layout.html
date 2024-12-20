@@ -40,11 +40,17 @@
 {%- block content %}
 <main>
   <div class="section">
+    {% if theme_sidebar_position == "left" %}
+    {% include 'sidebar.html' %}
+    {% endif %}
     <div class="content">
     {% block document %}
     {{ body }}
     {% endblock %}
     </div>
+    {% if theme_sidebar_position == "right" %}
+    {% include 'sidebar.html' %}
+    {% endif %}
   </div>
 </main>
 {% endblock %}

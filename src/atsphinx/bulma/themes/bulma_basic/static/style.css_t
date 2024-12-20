@@ -13,6 +13,15 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
+  > .section {
+    display: grid;
+    {% if theme_sidebar_position == "left" -%}
+    grid-template-columns: 16em 1fr;
+    {%- endif %}
+    {% if theme_sidebar_position == "right" -%}
+    grid-template-columns: 1fr 16em;
+    {%- endif %}
+  }
 }
 footer.footer, div.footer {
   margin-top: auto;

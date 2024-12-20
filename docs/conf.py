@@ -23,6 +23,7 @@ html_theme_options = {
 }
 html_title = f"{project} v{release}"
 html_static_path = ["_static"]
+html_sidebars = {"**": ["sidebar/search.html"]}
 
 # -- Options for extensions
 # sphinx.ext.todo

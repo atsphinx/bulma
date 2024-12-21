@@ -24,6 +24,8 @@ jobs:
       - name: 'Build document'
         run: |
           task docs:build
+        env:
+          GITHUB_PAGES: 1
       - name: 'Upload artifact'
         uses: actions/upload-pages-artifact@v3
         with:

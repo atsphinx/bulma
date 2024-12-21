@@ -14,14 +14,23 @@
 
 
 {% block body %}
-<noscript>
-<div class="admonition error">
-  <p class="admonition-title">{% trans %}Error{% endtrans %}</p>
+  <h1 id="search-documentation">{{ _('Search') }}</h1>
+  <noscript>
+    <article class="message is-warning">
+      <div class="message-header">
+        <p>{% trans %}Error{% endtrans %}</p>
+      </div>
+      <div class="message-body">
+        <p>
+          {% trans %}Please activate JavaScript to enable the search functionality.{% endtrans %}
+        </p>
+      </div>
+    </article>
+  </noscript>
   <p>
-    {% trans %}Please activate JavaScript to enable the search functionality.{% endtrans %}
+    {% trans %}Searching for multiple words only shows matches that contain
+    all words.{% endtrans %}
   </p>
-</div>
-</noscript>
   <div class="block">
     <form method="get" action="{{ pathto('search') }}" role="search">
       <div class="field has-addons">

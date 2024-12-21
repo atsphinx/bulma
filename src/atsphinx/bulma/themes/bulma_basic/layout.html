@@ -44,9 +44,7 @@
     {% include 'sidebar.html' %}
     {% endif %}
     <div class="content">
-    {% block document %}
-    {{ body }}
-    {% endblock %}
+    {% block body %} {% endblock %}
     </div>
     {% if theme_sidebar_position == "right" %}
     {% include 'sidebar.html' %}

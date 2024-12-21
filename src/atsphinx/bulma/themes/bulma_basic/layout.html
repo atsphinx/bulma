@@ -1,5 +1,13 @@
 {% extends "basic/layout.html" %}
 
+{% macro sidebar() %}
+  <aside class="sidebar">
+  {% for item in sidebars %}
+    {% include item %}
+  {% endfor %}
+  </aside>
+{% endmacro %}
+
 {% block extrahead %}
   {{ super() }}
   <script src="{{ pathto('_static/theme.js', 1) }}"></script>
@@ -41,13 +49,13 @@
 <main>
   <div class="section">
     {% if theme_sidebar_position == "left" %}
-    {% include 'sidebar.html' %}
+    {{ sidebar() }}
     {% endif %}
     <div class="content">
     {% block body %} {% endblock %}
     </div>
     {% if theme_sidebar_position == "right" %}
-    {% include 'sidebar.html' %}
+    {{ sidebar() }}
     {% endif %}
   </div>
 </main>

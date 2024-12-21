@@ -20,13 +20,10 @@ html_theme = "bulma-basic"
 html_theme_options = {
     "color_mode": "light",
     "bulmaswatch": "pulse",
+    "sidebar_position": "right",
 }
 html_title = f"{project} v{release}"
 html_static_path = ["_static"]
-html_sidebars = {
-    "**": ["sidebar/search.html"],
-    "search": [],
-}
 
 # -- Options for extensions
 # sphinx.ext.todo

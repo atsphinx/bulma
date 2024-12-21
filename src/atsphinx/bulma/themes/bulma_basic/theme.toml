@@ -5,6 +5,7 @@ sidebars = [
     "sidebar/searchbox.html",
     "sidebar/localtoc.html",
     "sidebar/relations.html",
+    "sidebar/sourcelink.html",
 ]
 
 [options]

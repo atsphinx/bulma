@@ -11,9 +11,15 @@ release = version
 # -- General configuration
 extensions = [
     "sphinx.ext.todo",
+    # My extensions
+    "atsphinx.mini18n",
 ]
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+
+# -- Options for i18n
+gettext_compact = False
+locale_dirs = ["_locales"]
 
 # -- Options for HTML output
 html_theme = "bulma-basic"
@@ -38,6 +44,7 @@ html_title = f"{project} v{release}"
 html_static_path = ["_static"]
 html_sidebars = {
     "**": [
+        "select-lang.html",
         "sidebar/searchbox.html",
         "sidebar/localtoc.html",
         "navigation.html",
@@ -47,3 +54,8 @@ html_sidebars = {
 # -- Options for extensions
 # sphinx.ext.todo
 todo_include_todos = True
+# atsphinx.mini18n
+mini18n_default_language = "en"
+mini18n_support_languages = ["en", "ja"]
+mini18n_select_lang_label = "Languages"
+mini18n_basepath = "/bulma/"

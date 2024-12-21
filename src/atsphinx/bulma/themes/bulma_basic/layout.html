@@ -34,6 +34,16 @@
     </div>
 
     <div class="navbar-end">
+      {% for item in theme_navbar_icons %}
+      <a class="navbar-item" href="{{ item.url }}" target="_blank" rel="noreferrer noopener">
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas {{ item.icon }}"></i>
+          </span>
+          <span>{{ item.label }}</span>
+        </span>
+      </a>
+      {% endfor %}
     </div>
   </div>
 </nav>

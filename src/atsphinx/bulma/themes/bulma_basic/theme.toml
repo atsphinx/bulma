@@ -13,3 +13,4 @@ bulma_version = "1.0.2"
 bulmaswatch = ""
 color_mode = ""
 sidebar_position = "left"
+navbar_icons = []

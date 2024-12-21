@@ -1,7 +1,11 @@
 [theme]
 inherit = "basic"
 stylesheets = ["style.css"]
-sidebars = ["sidebar/searchbox.html","sidebar/localtoc.html"]
+sidebars = [
+    "sidebar/searchbox.html",
+    "sidebar/localtoc.html",
+    "sidebar/relations.html",
+]
 
 [options]
 bulma_version = "1.0.2"

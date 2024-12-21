@@ -1,5 +1,7 @@
 """Configuration for documents."""
 
+import os
+
 from atsphinx.bulma import __version__ as version
 
 # -- Project information
@@ -10,6 +12,8 @@ release = version
 
 # -- General configuration
 extensions = [
+    # Bundled extensions
+    "sphinx.ext.githubpages",
     "sphinx.ext.todo",
     # My extensions
     "atsphinx.mini18n",
@@ -58,4 +62,4 @@ todo_include_todos = True
 mini18n_default_language = "en"
 mini18n_support_languages = ["en", "ja"]
 mini18n_select_lang_label = "Languages"
-mini18n_basepath = "/bulma/"
+mini18n_basepath = "/bulma/" if os.environ.get("GITHUB_PAGES") else "/"

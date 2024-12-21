@@ -10,17 +10,15 @@ atsphinx-bulma is Sphinx extension for html-based builder to improve contents by
 Installation
 ============
 
-.. note:: It does not work yet.
+You can install from PyPI by your package manager.
 
-   You can install from PyPI by your package manager.
+.. code-block:: console
 
-   .. code-block:: console
+   pip install atsphinx-bulma
 
-      pip install atsphinx-bulma
+.. code-block:: console
 
-   .. code-block:: console
-
-      uv add atsphinx-bulma
+   uv add atsphinx-bulma
 
 Features and usage
 ==================

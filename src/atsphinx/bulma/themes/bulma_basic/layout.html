@@ -1,7 +1,7 @@
 {% extends "basic/layout.html" %}
 
 {% macro bulma_sidebar() %}
-  <aside class="sidebar">
+  <aside class="sidebar" role="navigation">
   {% for item in sidebars %}
     {% include item %}
   {% endfor %}

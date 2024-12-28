@@ -31,6 +31,7 @@ html_theme_options = {
     "color_mode": "light",
     "bulmaswatch": "pulse",
     "sidebar_position": "right",
+    "sidebar_size": 3,
     "navbar_icons": [
         {
             "label": "",

@@ -1,7 +1,7 @@
 {% extends "basic/layout.html" %}
 
 {% macro bulma_sidebar() %}
-  <aside class="sidebar column is-2 is-hidden-mobile" role="navigation">
+  <aside class="sidebar column is-{{ theme_sidebar_size }} is-hidden-mobile" role="navigation">
   {% for item in sidebars %}
     {% include item %}
   {% endfor %}

@@ -1,6 +1,6 @@
 {% extends "basic/layout.html" %}
 
-{% macro sidebar() %}
+{% macro bulma_sidebar() %}
   <aside class="sidebar">
   {% for item in sidebars %}
     {% include item %}
@@ -59,13 +59,13 @@
 <main>
   <div class="section">
     {% if theme_sidebar_position == "left" %}
-    {{ sidebar() }}
+    {{ bulma_sidebar() }}
     {% endif %}
     <div class="content">
     {% block body %} {% endblock %}
     </div>
     {% if theme_sidebar_position == "right" %}
-    {{ sidebar() }}
+    {{ bulma_sidebar() }}
     {% endif %}
   </div>
 </main>

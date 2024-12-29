@@ -52,6 +52,7 @@ html_static_path = ["_static"]
 html_sidebars = {
     "**": [
         "sidebar/logo.html",
+        "sidebar/line.html",
         "select-lang.html",
         "sidebar/searchbox.html",
         "sidebar/localtoc.html",

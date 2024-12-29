@@ -17,5 +17,6 @@ logo_description = ""
 color_mode = ""
 sidebar_position = "left"
 sidebar_size = 2
+navbar_search = false
 navbar_icons = []
 show_theme_credit = true

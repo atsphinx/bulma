@@ -26,10 +26,12 @@ gettext_compact = False
 locale_dirs = ["_locales"]
 
 # -- Options for HTML output
+html_logo = "https://attakei.net/_static/images/icon-attakei@2x.png"
 html_theme = "bulma-basic"
 html_theme_options = {
     "color_mode": "light",
     "bulmaswatch": "pulse",
+    "logo_description": "This is documentation of atsphinx-bulma.",
     "sidebar_position": "right",
     "sidebar_size": 3,
     "navbar_icons": [
@@ -49,6 +51,7 @@ html_title = f"{project} v{release}"
 html_static_path = ["_static"]
 html_sidebars = {
     "**": [
+        "sidebar/logo.html",
         "select-lang.html",
         "sidebar/searchbox.html",
         "sidebar/localtoc.html",

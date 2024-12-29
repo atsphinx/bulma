@@ -1,0 +1,10 @@
+{%- if logo_url %}
+<aside class="container m-2">
+  <figure class="image mx-auto {{ theme_logo_class }}">
+    <img src="{{ logo_url }}" >
+  </figure>
+  <p>
+    {{ theme_logo_description }}
+  </p>
+</aside>
+{% endif %}

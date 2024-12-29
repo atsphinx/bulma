@@ -34,6 +34,18 @@
         {{ tree.title }}
       </a>
       {% endfor %}
+      {% for site in theme_navbar_links %}
+      <a class="navbar-item" href={{ site.url }} target="_blank" rel="noreferrer noopener">
+        <span class="icon-text">
+          <span>
+            {{ site.title }}
+          </span>
+          <span class="icon">
+            <i class="fas fa-xs fa-external-link"></i>
+          </span>
+        </span>
+      </a>
+      {% endfor %}
     </div>
 
     <div class="navbar-end">

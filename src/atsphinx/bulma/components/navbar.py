@@ -15,16 +15,24 @@ def register_root_toctree_dict(
     doctree: Optional[nodes.document],
 ) -> None:
     """Pass toctree of root for navbar."""
-    doctree = app.env.get_doctree(app.config.root_doc)
-    subs = []
-    for tree in doctree.findall(toctree):
-        for title, page in tree["entries"]:
-            subs.append(
-                {
-                    "uri": app.builder.get_relative_uri(pagename, page),
-                    "title": title
-                    or next(app.env.get_doctree(page).findall(nodes.title)).astext(),
-                }
-            )
-    context["root_toctree_dict"] = subs
+
+    def root_toctree_dict(show_hidden: bool = False):
+        doctree = app.env.get_doctree(app.config.root_doc)
+        subs = []
+        for tree in doctree.findall(toctree):
+            if tree["hidden"] and not show_hidden:
+                continue
+            for title, page in tree["entries"]:
+                subs.append(
+                    {
+                        "uri": app.builder.get_relative_uri(pagename, page),
+                        "title": title
+                        or next(
+                            app.env.get_doctree(page).findall(nodes.title)
+                        ).astext(),
+                    }
+                )
+        return subs
+
+    context["root_toctree_dict"] = root_toctree_dict
     return

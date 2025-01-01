@@ -10,8 +10,8 @@ replace = "version = \"{{new_version}}\""
 [[files]]
 path = "src/atsphinx/bulma/__init__.py"
 
-search = "version = \"{{current_version}}\""
-replace = "version = \"{{new_version}}\""
+search = "__version__ = \"{{current_version}}\""
+replace = "__version__ = \"{{new_version}}\""
 
 
 [[files]]
@@ -43,3 +43,18 @@ Others
 ------
 """
 
+[[files]]
+path = ".github/release-body.md"
+search = "Release atsphinx-bulma v{{ current_version }}"
+replace = "Release atsphinx-bulma v{{ new_version }}"
+
+[[files]]
+path = ".github/release-body.md"
+search = "- Changelog is https://github.com/atsphinx/bulma/blob/v{{ current_version }}/CHANGES.rst"
+replace = "- Changelog is https://github.com/atsphinx/bulma/blob/v{{ new_version }}/CHANGES.rst"
+
+[[files]]
+path = ".github/release-body.md"
+regex = true
+search = "- Changes are .+"
+replace = "- Changes are https://github.com/atsphinx/bulma/compare/v{{ current_version }}...v{{ new_version }}/"

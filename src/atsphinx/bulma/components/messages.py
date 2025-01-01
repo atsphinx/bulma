@@ -3,7 +3,6 @@
 from typing import Optional, TypedDict
 
 from docutils import nodes
-from sphinx.application import Sphinx
 from sphinx.locale import admonitionlabels
 from sphinx.writers.html5 import HTML5Translator
 
@@ -69,13 +68,3 @@ def depart_admonition(  # noqa: D103
 ) -> None:
     self.body.append("  </div>")
     self.body.append("</article>")
-
-
-def setup(app: Sphinx):  # noqa: D103
-    app.add_config_value(
-        "bulma_message_classes",
-        DEFAULT_MESSAGE_CLASSES,
-        "env",
-        MessageClassMap,
-    )
-    app.add_config_value("bulma_message_fallback", "", "env", str)

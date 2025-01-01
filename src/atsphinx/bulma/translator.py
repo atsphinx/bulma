@@ -1,6 +1,5 @@
 """Collection of translators for Bluma components."""
 
-from sphinx.application import Sphinx
 from sphinx.writers.html5 import HTML5Translator
 from typing_extensions import override
 
@@ -20,9 +19,3 @@ class BulmaTranslator(HTML5Translator):  # noqa: D101
     @override
     def depart_admonition(self, node=None):
         messages.depart_admonition(self, node)
-
-
-def setup(app: Sphinx):  # noqa: D103
-    app.set_translator("html", BulmaTranslator)
-    app.set_translator("dirhtml", BulmaTranslator)
-    app.setup_extension("atsphinx.bulma.components.messages")

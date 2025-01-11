@@ -24,14 +24,68 @@ Usage
 Options
 =======
 
-* **bulma_version** : Version of bulma to fetch from CDN. Default is ``'1.0.2'``.
-* **bulmaswatch** : Theme name of `bulmaswatch <https://jenil.github.io/bulmaswatch/>`_ if it is set no-blank string. Default is ``''``.
-* **color_mode** : Using color mode. Set ``'light'``, ``'dark'`` , ``''``.
-* **logo_class** : When you set ``html_logo`` into ``conf.py``, set class attributes.
-* **logo_description** : Description text under logo image on sideber.
-* **sidebar_position**: Which sidebar renders on content. Set ``'left'`` or ``'right'``.
-* **sideber_size** : Column size of sidebar. Default is ``2``.
-* **navbar_icons** : Configurations for icons on navbar (top of page).
-* **navbar_search** : When this is set ``True``, display search input form on navbar.
-* **navbar_links** : Addtional links on navbar.
-* **show_theme_credit** : Please set ``False`` if you don't want to render credit of this extension.
+.. confval:: bulma_version
+   :type: str
+   :default: ``"1.0.2"``
+
+   Version of bulma to fetch from CDN.
+
+.. confval:: bulmaswatch
+   :type: str
+   :default: ``""``
+
+   Theme name of `bulmaswatch <https://jenil.github.io/bulmaswatch/>`_ if it is set no-blank string.
+
+.. confval:: color_mode
+   :type: Literal["light", "dark", ""]
+   :default: ``""``
+
+   Using color mode.
+
+.. confval:: logo_class
+   :type: str
+   :default: ``"is-128x128"``
+
+   When you set ``html_logo`` into ``conf.py``, set class attributes.
+
+.. confval:: logo_description
+   :type: str
+   :default: ``""``
+
+   Description text under logo image on sideber.
+
+.. confval:: sidebar_position
+   :type: Literal["left", "right"]
+   :default: ``"left"``
+
+   Which sidebar renders on content. Set ``'left'`` or ``'right'``.
+
+.. confval:: sideber_size
+   :type: int
+   :default: ``2``
+
+   Column size of sidebar.
+
+.. confval:: navbar_icons
+   :type: list[dict]
+   :default: ``[]``
+
+   Configurations for icons on navbar (top of page).
+
+.. confval:: navbar_search
+   :type: bool
+   :default: ``False``
+
+   When this is set ``True``, display search input form on navbar.
+
+.. confval:: navbar_links
+   :type: list[dict]
+   :default: ``[]``
+
+   Addtional links on navbar.
+
+.. confval:: show_theme_credit
+   :type: bool
+   :default: ``True``
+
+   Please set ``False`` if you don't want to render credit of this extension.

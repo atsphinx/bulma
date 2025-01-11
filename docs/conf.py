@@ -15,6 +15,8 @@ extensions = [
     # Bundled extensions
     "sphinx.ext.githubpages",
     "sphinx.ext.todo",
+    # Third-party extensions
+    "sphinx_toolbox.confval",
     # My extensions
     "atsphinx.mini18n",
 ]

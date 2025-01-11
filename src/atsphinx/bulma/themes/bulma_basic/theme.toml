@@ -1,6 +1,7 @@
 [theme]
 inherit = "basic"
 stylesheets = ["style.css"]
+pygments_style = { default = "sphinx" }
 sidebars = [
     "sidebar/logo.html",
     "sidebar/searchbox.html",

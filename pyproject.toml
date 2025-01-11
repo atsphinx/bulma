@@ -57,6 +57,7 @@ dev-dependencies = [
     "mypy>=1.13.0",
     "types-docutils>=0.21.0.20241128",
     "sphinx-toolbox>=3.8.1",
+    "atsphinx-goto-top>=0.1.1",
 ]
 
 [tool.ruff.lint]

@@ -18,6 +18,7 @@ extensions = [
     # Third-party extensions
     "sphinx_toolbox.confval",
     # My extensions
+    "atsphinx.goto_top",
     "atsphinx.mini18n",
 ]
 templates_path = ["_templates"]

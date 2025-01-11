@@ -64,6 +64,7 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "atsphinx-goto-top" },
     { name = "atsphinx-mini18n" },
     { name = "esbonio" },
     { name = "mypy" },
@@ -82,6 +83,7 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "atsphinx-goto-top", specifier = ">=0.1.1" },
     { name = "atsphinx-mini18n" },
     { name = "esbonio" },
     { name = "mypy", specifier = ">=1.13.0" },
@@ -90,6 +92,18 @@ dev = [
     { name = "sphinx-intl" },
     { name = "sphinx-toolbox", specifier = ">=3.8.1" },
     { name = "types-docutils", specifier = ">=0.21.0.20241128" },
+]
+
+[[package]]
+name = "atsphinx-goto-top"
+version = "0.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "sphinx" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a2/11/11c23c9bc0a44199f886be284fb40192323b29802a7514f2fab70f739417/atsphinx_goto_top-0.1.1.tar.gz", hash = "sha256:6c15165e9b89163d61fa00bac7494953bd39a58626f8f62e762fcd22f62e2402", size = 76401 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/75/ca/560b28cef32b56ab72826951dc33c168edeec9ddd98af009a50ab0b801e6/atsphinx_goto_top-0.1.1-py3-none-any.whl", hash = "sha256:42cae34c6efa55c38c08e6ff5c2cc9605d5517629faa41564a7f31dfb9ebd044", size = 8187 },
 ]
 
 [[package]]

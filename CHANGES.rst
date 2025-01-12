@@ -2,6 +2,27 @@
 Change logs
 ===========
 
+v0.2.1
+======
+
+:Date: 2025-01-12 (JST)
+
+Fixes
+-----
+
+* Theme
+
+  * Set pygments style.
+  * Does not try import when ``bulmaswatch`` of html_theme_options is not set.
+
+Others
+------
+
+* Document
+
+  * Use confval.
+  * Use navigation for scroll to top.
+
 v0.2.0
 ======
 

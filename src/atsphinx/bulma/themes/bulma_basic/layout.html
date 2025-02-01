@@ -92,7 +92,7 @@
     {% if theme_sidebar_position == "left" %}
     {{ bulma_sidebar() }}
     {% endif %}
-    <main class="column content">
+    <main class="column content is-{{ 12 - theme_sidebar_size }}">
     {% block body %} {% endblock %}
     </main>
     {% if theme_sidebar_position == "right" %}

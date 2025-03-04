@@ -1,4 +1,4 @@
-Release atsphinx-bulma v0.2.1
+Release atsphinx-bulma v0.2.2
 
-- Changelog is https://github.com/atsphinx/bulma/blob/v0.2.1/CHANGES.rst
-- Changes are https://github.com/atsphinx/bulma/compare/v0.2.0...v0.2.1/
+- Changelog is https://github.com/atsphinx/bulma/blob/v0.2.2/CHANGES.rst
+- Changes are https://github.com/atsphinx/bulma/compare/v0.2.1...v0.2.2/

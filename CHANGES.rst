@@ -2,6 +2,25 @@
 Change logs
 ===========
 
+v0.2.2
+======
+
+:Date: 2025-03-05 (Asia/Tokyo)
+
+Fixes
+-----
+
+* Explicit column of main contents to wrap code-block.
+* Set alignment by doctree.
+
+Others
+------
+
+* Python version of workspace is 3.12
+
+  * This is minimum version supported as "bug-fix" status.
+  * Required version is still >=3.9.
+
 v0.2.1
 ======
 

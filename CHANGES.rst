@@ -2,6 +2,16 @@
 Change logs
 ===========
 
+v0.2.3
+======
+
+:Date: 2025-03-15 (Asia/Tokyo)
+
+Others
+------
+
+* search.html does not override 'body' block.
+
 v0.2.2
 ======
 

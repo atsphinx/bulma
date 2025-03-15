@@ -2,6 +2,16 @@
 Change logs
 ===========
 
+v0.2.4
+======
+
+:Date: 2025-03-15 (Asia/Tokyo)
+
+Fixes
+-----
+
+* Change CDN of Blumaswatch.
+
 v0.2.3
 ======
 

@@ -1,10 +1,11 @@
-name: 'Deploy document'
+name: "Deployment document"
 
 on:
-  push:
-    branches:
-      - 'main'
+  workflow_call:
   workflow_dispatch:
+
+env:
+  TASK_X_REMOTE_TASKFILES: 1
 
 jobs:
   deploy-docs:
@@ -17,19 +18,17 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: jdx/mise-action@v2
-      - name: 'Configure dependencies'
+      - uses: "./.github/actions/setup-aqua"
+      - name: Set up workspace
         run: |
-          uv sync --frozen --all-extras
-      - name: 'Build document'
+          uv sync --frozen
+      - name: "Build document"
         run: |
-          task docs:build
-        env:
-          GITHUB_PAGES: 1
-      - name: 'Upload artifact'
+          task --yes docs:build-mini18n-dirhtml
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/_build/mini18n-dirhtml
-      - name: 'Deploy to GitHub Pages'
+          path: doc/_build/mini18n-dirhtml
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

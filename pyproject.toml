@@ -88,3 +88,7 @@ only-includes = ["src/atsphinx"]
 
 [tool.mypy]
 python_version = "3.9"
+
+[[tool.mypy.overrides]]
+module = ["atsphinx.bulma.*"]
+ignore_missing_imports = true

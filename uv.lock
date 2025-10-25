@@ -63,6 +63,7 @@ name = "atsphinx-bulma"
 version = "0.2.4"
 source = { editable = "." }
 dependencies = [
+    { name = "beautifulsoup4" },
     { name = "sphinx" },
     { name = "typing-extensions" },
 ]
@@ -77,6 +78,7 @@ dev = [
     { name = "sphinx-autobuild" },
     { name = "sphinx-intl" },
     { name = "sphinx-toolbox" },
+    { name = "types-beautifulsoup4" },
     { name = "types-docutils" },
 ]
 docs = [
@@ -87,6 +89,7 @@ docs = [
 ]
 lint = [
     { name = "mypy" },
+    { name = "types-beautifulsoup4" },
     { name = "types-docutils" },
 ]
 test = [
@@ -95,6 +98,7 @@ test = [
 
 [package.metadata]
 requires-dist = [
+    { name = "beautifulsoup4", specifier = ">=4" },
     { name = "sphinx", specifier = ">=7.3.0" },
     { name = "typing-extensions", specifier = ">=4.12.2" },
 ]
@@ -109,6 +113,7 @@ dev = [
     { name = "sphinx-autobuild" },
     { name = "sphinx-intl" },
     { name = "sphinx-toolbox", specifier = ">=3.8.1" },
+    { name = "types-beautifulsoup4", specifier = ">=4.12.0.20250516" },
     { name = "types-docutils", specifier = ">=0.21.0.20241128" },
 ]
 docs = [
@@ -119,6 +124,7 @@ docs = [
 ]
 lint = [
     { name = "mypy", specifier = ">=1.13.0" },
+    { name = "types-beautifulsoup4", specifier = ">=4.12.0.20250516" },
     { name = "types-docutils", specifier = ">=0.21.0.20241128" },
 ]
 test = [{ name = "pytest" }]
@@ -1101,12 +1107,33 @@ wheels = [
 ]
 
 [[package]]
+name = "types-beautifulsoup4"
+version = "4.12.0.20250516"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "types-html5lib" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6d/d1/32b410f6d65eda94d3dfb0b3d0ca151f12cb1dc4cef731dcf7cbfd8716ff/types_beautifulsoup4-4.12.0.20250516.tar.gz", hash = "sha256:aa19dd73b33b70d6296adf92da8ab8a0c945c507e6fb7d5db553415cc77b417e", size = 16628, upload-time = "2025-05-16T03:09:09.93Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7c/79/d84de200a80085b32f12c5820d4fd0addcbe7ba6dce8c1c9d8605e833c8e/types_beautifulsoup4-4.12.0.20250516-py3-none-any.whl", hash = "sha256:5923399d4a1ba9cc8f0096fe334cc732e130269541d66261bb42ab039c0376ee", size = 16879, upload-time = "2025-05-16T03:09:09.051Z" },
+]
+
+[[package]]
 name = "types-docutils"
 version = "0.21.0.20241128"
 source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/dd/df/64e7ab01a4fc5ce46895dc94e31cffc8b8087c8d91ee54c45ac2d8d82445/types_docutils-0.21.0.20241128.tar.gz", hash = "sha256:4dd059805b83ac6ec5a223699195c4e9eeb0446a4f7f2aeff1759a4a7cc17473", size = 26739, upload-time = "2024-11-28T02:54:57.756Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/59/b6/10ba95739f2cbb9c5bd2f6568148d62b468afe01a94c633e8892a2936d8a/types_docutils-0.21.0.20241128-py3-none-any.whl", hash = "sha256:e0409204009639e9b0bf4521eeabe58b5e574ce9c0db08421c2ac26c32be0039", size = 34677, upload-time = "2024-11-28T02:54:55.64Z" },
+]
+
+[[package]]
+name = "types-html5lib"
+version = "1.1.11.20251014"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/8a/b8/0ce98d9b20a4e8bdac4f4914054acadf5b3a36a7a832e11e0d1938e4c3ce/types_html5lib-1.1.11.20251014.tar.gz", hash = "sha256:cc628d626e0111a2426a64f5f061ecfd113958b69ff6b3dc0eaaed2347ba9455", size = 16895, upload-time = "2025-10-14T02:54:50.003Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c9/cb/df12640506b8dbd2f2bd0643c5ef4a72fa6285ec4cd7f4b20457842e7fd5/types_html5lib-1.1.11.20251014-py3-none-any.whl", hash = "sha256:4ff2cf18dfc547009ab6fa4190fc3de464ba815c9090c3dd4a5b65f664bfa76c", size = 22916, upload-time = "2025-10-14T02:54:48.686Z" },
 ]
 
 [[package]]

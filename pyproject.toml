@@ -46,19 +46,30 @@ Documentation = "https://atsphinx.github.io/bulma"
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[tool.uv]
-managed = true
-dev-dependencies = [
+[dependency-groups]
+dev = [
+    { include-group = "lint" },
+    { include-group = "test" },
+    { include-group = "docs" },
     "esbonio",
-    "pytest",
     "sphinx-autobuild",
-    "sphinx-intl",
-    "atsphinx-mini18n",
+]
+lint = [
     "mypy>=1.13.0",
     "types-docutils>=0.21.0.20241128",
-    "sphinx-toolbox>=3.8.1",
-    "atsphinx-goto-top>=0.1.1",
 ]
+test = [
+    "pytest",
+]
+docs = [
+    "atsphinx-goto-top>=0.1.1",
+    "atsphinx-mini18n",
+    "sphinx-intl",
+    "sphinx-toolbox>=3.8.1",
+]
+
+[tool.uv]
+managed = true
 
 [tool.ruff.lint]
 select = ["C90", "D", "E", "F", "I", "W"]

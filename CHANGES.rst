@@ -2,6 +2,32 @@
 Change logs
 ===========
 
+v0.3.0
+======
+
+:Date: 2025-10-26 (Asia/Tokyo)
+
+Deps
+----
+
+* Update default Bulma version to 1.0.4.
+
+Features
+--------
+
+* Support custom version of Blumaswatch. It set current latest version.
+
+Fixes
+-----
+
+* Redesign section elements to render flatten.
+* Add ``menu-list`` class into toc components of sidebar without JavaScript.
+
+Others
+------
+
+* Update classifier to mark as "Beta" product.
+
 v0.2.4
 ======
 

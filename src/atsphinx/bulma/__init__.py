@@ -5,7 +5,7 @@ from sphinx.application import Sphinx
 from .components.messages import DEFAULT_MESSAGE_CLASSES, MessageClassMap
 from .translator import BulmaTranslator
 
-__version__ = "0.2.4"
+__version__ = "0.3.0"
 
 
 def setup(app: Sphinx):  # noqa: D103

@@ -26,7 +26,7 @@ Options
 
 .. confval:: bulma_version
    :type: str
-   :default: ``"1.0.2"``
+   :default: ``"1.0.4"``
 
    Version of bulma to fetch from CDN.
 
@@ -35,6 +35,12 @@ Options
    :default: ``""``
 
    Theme name of `bulmaswatch <https://jenil.github.io/bulmaswatch/>`_ if it is set no-blank string.
+
+.. confval:: bulmaswatch_version
+   :type: str
+   :default: ``"0.8.1"``
+
+   Version of bulmaswatch to fetch from CDN.
 
 .. confval:: color_mode
    :type: Literal["light", "dark", ""]

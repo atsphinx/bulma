@@ -1,6 +1,6 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@{{ theme_bulma_version }}/css/bulma.min.css";
 {% if theme_bulmaswatch != "" -%}
-  @import "https://cdn.jsdelivr.net/npm/bulmaswatch@0.8.1/{{ theme_bulmaswatch }}/bulmaswatch.min.css";
+  @import "https://cdn.jsdelivr.net/npm/bulmaswatch@{{ theme_bulmaswatch_version }}/{{ theme_bulmaswatch }}/bulmaswatch.min.css";
 {%- endif %}
 
 /* For sticky footer */
@@ -91,4 +91,3 @@ img.align-default, figure.align-default, .figure.align-default {
 .align-right {
     text-align: right;
 }
-

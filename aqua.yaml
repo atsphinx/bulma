@@ -15,3 +15,4 @@ packages:
   - name: evilmartians/lefthook@v1.11.13
   - name: go-task/task@v3.43.3
   - name: oven-sh/bun@bun-v1.3.1
+  - name: biomejs/biome@cli/v1.9.4

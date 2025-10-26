@@ -44,7 +44,7 @@ jobs:
     if: success() && ${{ needs.prepare.outputs.is-release }}
     environment:
       name: 'pypi'
-      url: 'https://pypi.org/p/atsphinx-mini18n'
+      url: 'https://pypi.org/p/atsphinx-bulma'
     permissions:
       id-token: write
     steps:
@@ -54,10 +54,10 @@ jobs:
           path: dist/
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
-  deploy-doc:
+  deploy-docs:
     needs: [build]
     permissions:
       pages: write
       id-token: write
-    uses: './.github/workflows/deploy-doc.yml'
+    uses: './.github/workflows/deploy-docs.yml'
     secrets: inherit

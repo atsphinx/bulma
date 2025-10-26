@@ -21,14 +21,14 @@ jobs:
       - uses: "./.github/actions/setup-aqua"
       - name: Set up workspace
         run: |
-          uv sync --frozen
+          uv sync --group=docs --frozen
       - name: "Build document"
         run: |
           task --yes docs:build-mini18n-dirhtml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: doc/_build/mini18n-dirhtml
+          path: docs/_build/mini18n-dirhtml
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

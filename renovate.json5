@@ -12,11 +12,6 @@
     "* 20-23 * * 1-5",
     "* 9-21 * * 0,6",
   ],
-  "enabledManagers": [
-    "github-actions",
-    "custom.jsonata",
-    "custom.regex",
-  ],
   "automerge": true,
   "packageRules": [
     {
@@ -29,6 +24,11 @@
       "matchPackageNames": ["attakei/workspace-configs"],
       "matchUpdateTypes": ["patch"],
       "enabled": false,
+    },
+    // NOTE: Require approve when it updates major version of deps
+    {
+      "matchDatasources": ["npm"],
+      "automerge": false,
     },
   ],
 }

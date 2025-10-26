@@ -16,3 +16,7 @@ pre-commit:
     doc8:
       glob: '*.rst'
       run: 'uvx doc8 --max-line-length=119 {staged_files}'
+    biomejs:
+      glob: '*.ts'
+      run: 'biome check --fix {staged_files}'
+      stage_fixed: true

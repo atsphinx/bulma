@@ -11,8 +11,9 @@ sidebars = [
 ]
 
 [options]
-bulma_version = "1.0.2"
+bulma_version = "1.0.4"
 bulmaswatch = ""
+bulmaswatch_version = "0.8.1"
 color_mode = ""
 logo_class = "is-128x128"
 logo_description = ""

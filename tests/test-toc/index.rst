@@ -1,5 +1,7 @@
 Test doc for atsphinx-bulma
 ===========================
 
-Section title
--------------
+.. toctree::
+    :maxdepth: 2
+
+    sub1

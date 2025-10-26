@@ -31,6 +31,7 @@ classifiers = [
 ]
 readme = "README.rst"
 dependencies = [
+    "beautifulsoup4>=4",
     "sphinx>=7.3.0",
     "typing-extensions>=4.12.2",
 ]
@@ -56,6 +57,7 @@ dev = [
 ]
 lint = [
     "mypy>=1.13.0",
+    "types-beautifulsoup4>=4.12.0.20250516",
     "types-docutils>=0.21.0.20241128",
 ]
 test = [
@@ -86,3 +88,7 @@ only-includes = ["src/atsphinx"]
 
 [tool.mypy]
 python_version = "3.9"
+
+[[tool.mypy.overrides]]
+module = ["atsphinx.bulma.*"]
+ignore_missing_imports = true

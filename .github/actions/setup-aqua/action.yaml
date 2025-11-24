@@ -20,7 +20,7 @@ runs:
         key: "v2-aqua-installer-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles(inputs.aqua_config_path) }}"
         restore-keys: |
           v2-aqua-installer-${{runner.os}}-${{runner.arch}}-
-    - uses: "aquaproj/aqua-installer@5d5e59855a25a30cef9eae3fd79b2c522804c63a"
+    - uses: "aquaproj/aqua-installer@a0f344b9b469334c1b4341f706abbd9ef1b99ca1"
       with:
         aqua_version: "${{ inputs.aqua_version }}"
       env:

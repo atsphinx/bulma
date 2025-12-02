@@ -25,6 +25,8 @@ jobs:
       - name: "Build document"
         run: |
           task --yes docs:build-mini18n-dirhtml
+        env:
+          GITHUB_PAGES: 1
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:

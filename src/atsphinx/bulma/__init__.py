@@ -1,9 +1,15 @@
 """Bluma using suite for Sphinx.."""
 
-from sphinx.application import Sphinx
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 
 from .components.messages import DEFAULT_MESSAGE_CLASSES, MessageClassMap
 from .translator import BulmaTranslator
+
+if TYPE_CHECKING:
+    from sphinx.application import Sphinx
+
 
 __version__ = "0.3.0"
 

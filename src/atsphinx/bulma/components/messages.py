@@ -1,10 +1,16 @@
 """Translator for messages (from admonition)."""
 
-from typing import Optional, TypedDict
+from __future__ import annotations
+
+from typing import TYPE_CHECKING, TypedDict
 
 from docutils import nodes
 from sphinx.locale import admonitionlabels
-from sphinx.writers.html5 import HTML5Translator
+
+if TYPE_CHECKING:
+    from typing import Optional
+
+    from sphinx.writers.html5 import HTML5Translator
 
 
 class MessageClassMap(TypedDict):

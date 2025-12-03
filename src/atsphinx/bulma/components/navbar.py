@@ -1,10 +1,15 @@
 """Additional for navbar."""
 
-from typing import Any, Optional
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 
 from docutils import nodes
 from sphinx.addnodes import toctree
-from sphinx.application import Sphinx
+
+if TYPE_CHECKING:
+    from typing import Any, Optional
+    from sphinx.application import Sphinx
 
 
 def register_root_toctree_dict(

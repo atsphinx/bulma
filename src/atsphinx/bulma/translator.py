@@ -1,5 +1,7 @@
 """Collection of translators for Bluma components."""
 
+from __future__ import annotations
+
 from sphinx.writers.html5 import HTML5Translator
 from typing_extensions import override
 

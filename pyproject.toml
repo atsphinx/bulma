@@ -57,9 +57,7 @@ dev = [
     "sphinx-autobuild",
 ]
 lint = [
-    "mypy>=1.13.0",
-    "types-beautifulsoup4>=4.12.0.20250516",
-    "types-docutils>=0.21.0.20241128",
+    "ty>=0.0.1a30",
 ]
 test = [
     "pytest",
@@ -86,10 +84,3 @@ allow-direct-references = true
 [tool.hatch.build.targets.wheel]
 packages = ["src/atsphinx"]
 only-includes = ["src/atsphinx"]
-
-[tool.mypy]
-python_version = "3.9"
-
-[[tool.mypy.overrides]]
-module = ["atsphinx.bulma.*"]
-ignore_missing_imports = true

@@ -2,6 +2,24 @@
 Change logs
 ===========
 
+v0.3.1
+======
+
+:Date: 2025-12-04 (Asia/Tokyo)
+
+Fixes
+-----
+
+* Use future annotations
+
+Others
+------
+
+* Update deps outside of uv.
+* tests: Use pathlib instead of sphinx.testing.path
+* Use ty for static check instead of mypy.
+* Mark Python 3.14 is supported on classifier.
+
 v0.3.0
 ======
 

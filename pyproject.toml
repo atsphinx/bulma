@@ -1,6 +1,6 @@
 [project]
 name = "atsphinx-bulma"
-version = "0.3.0"
+version = "0.3.1"
 description = "Bluma using suite for Sphinx."
 authors = [{name = "Kazuya Takei", email = "myself@attakei.net"}]
 license = "Apache-2.0"

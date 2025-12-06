@@ -20,6 +20,8 @@ extensions = [
     # My extensions
     "atsphinx.goto_top",
     "atsphinx.mini18n",
+    # FIXME: https://github.com/atsphinx/mini18n/issues/30
+    "atsphinx.bulma.themes.bulma_basic",
 ]
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]

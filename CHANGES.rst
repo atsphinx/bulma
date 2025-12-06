@@ -2,6 +2,22 @@
 Change logs
 ===========
 
+v0.4.1
+======
+
+:Date: 2025-12-07 (Asia/Tokyo)
+
+Fixes
+-----
+
+* bulma-basic theme: It skips part of setup when builder doesn't have templates property.
+
+Others
+------
+
+* Add type stub marker file.
+* Force load 'bulma-basic' theme for atsphinx-mini18n.
+
 v0.4.0
 ======
 

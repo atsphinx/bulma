@@ -11,7 +11,7 @@ if TYPE_CHECKING:
     from sphinx.application import Sphinx
 
 
-__version__ = "0.4.0"
+__version__ = "0.4.1"
 
 
 def setup(app: Sphinx):  # noqa: D103

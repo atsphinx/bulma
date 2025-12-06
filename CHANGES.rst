@@ -2,6 +2,38 @@
 Change logs
 ===========
 
+v0.4.0
+======
+
+:Date: 2025-12-06 (Asia/Tokyo)
+
+Breaking changes
+----------------
+
+* Drop some settings of theme_options for theme.
+
+  * ``sidebar_position``
+  * ``sidebar_size``
+  * the behaviors of these settings are migrated ``layout``.
+
+Features
+--------
+
+* Add settings for page layout into theme options.
+* Add Hero layout and directive.
+* Add ``navbar_show_hidden_toctree`` into theme options.
+
+Others
+------
+
+* Require Python 3.10 or later.
+* Drop Python 3.9 from supported versions.
+* Update docs
+
+  * Add seach box on navbar.
+  * Add hero into top page.
+  * Hide toctree on index.
+
 v0.3.1
 ======
 

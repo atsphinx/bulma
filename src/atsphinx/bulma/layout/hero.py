@@ -60,7 +60,7 @@ class HeroDirective(SphinxDirective):
 
     def run(self) -> list[hero]:  # noqa: D102
         node = hero()
-        node.attributes = self.options
+        node.attributes |= self.options
         return [
             node,
         ]

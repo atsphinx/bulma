@@ -60,18 +60,6 @@ Options
 
    Description text under logo image on sideber.
 
-.. confval:: sidebar_position
-   :type: Literal["left", "right"]
-   :default: ``"left"``
-
-   Which sidebar renders on content. Set ``'left'`` or ``'right'``.
-
-.. confval:: sideber_size
-   :type: int
-   :default: ``2``
-
-   Column size of sidebar.
-
 .. confval:: navbar_icons
    :type: list[dict]
    :default: ``[]``
@@ -95,3 +83,37 @@ Options
    :default: ``True``
 
    Please set ``False`` if you don't want to render credit of this extension.
+
+.. confval:: layout
+   :type: list[dict]
+   :default: ``{"**": [ {"type": "sidebar", "size": 2}, {"type": "main", "size": 10} ] }``
+
+   Layout of conten per page. See :ref:`layout-values`.
+
+.. _layout-values:
+
+Layout values
+=============
+
+You can manage layout of content layer by configure ``layout`` in ``html_theme_options``.
+
+.. todo:: TBD
+
+.. code-block:: json
+
+   {
+     "**": [
+       {
+         "type": "sidebar",
+         "size": 2
+       },
+       {
+         "type": "main",
+         "size": 8
+       },
+       {
+         "type": "space",
+         "size": 2
+       },
+     ]
+   }

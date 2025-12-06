@@ -35,8 +35,6 @@ html_theme_options = {
     "color_mode": "light",
     "bulmaswatch": "pulse",
     "logo_description": "This is documentation of atsphinx-bulma.",
-    "sidebar_position": "right",
-    "sidebar_size": 3,
     "navbar_icons": [
         {
             "label": "",
@@ -44,6 +42,22 @@ html_theme_options = {
             "url": "https://github.com/atsphinx/bulma",
         }
     ],
+    "layout": {
+        "**": [
+            {
+                "type": "space",
+                "size": 1,
+            },
+            {
+                "type": "main",
+                "size": 10,
+            },
+            {
+                "type": "space",
+                "size": 1,
+            },
+        ]
+    },
 }
 html_css_files = [
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css",
@@ -60,7 +74,7 @@ html_sidebars = {
         "sidebar/searchbox.html",
         "sidebar/localtoc.html",
         "navigation.html",
-    ]
+    ],
 }
 
 # -- Options for extensions

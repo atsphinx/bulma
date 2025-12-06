@@ -1,7 +1,7 @@
 {% extends "basic/layout.html" %}
 
-{% macro bulma_sidebar() %}
-  <aside class="sidebar column is-{{ theme_sidebar_size }} is-hidden-mobile" role="navigation">
+{% macro bulma_sidebar(size) %}
+  <aside class="sidebar column is-{{ size }} is-hidden-mobile" role="navigation">
   {% for item in sidebars %}
     {% include item %}
   {% endfor %}
@@ -89,15 +89,17 @@
 {%- block content %}
 <div class="section">
   <div class="columns">
-    {% if theme_sidebar_position == "left" %}
-    {{ bulma_sidebar() }}
-    {% endif %}
-    <main class="column content is-{{ 12 - theme_sidebar_size }}">
-    {% block body %} {% endblock %}
-    </main>
-    {% if theme_sidebar_position == "right" %}
-    {{ bulma_sidebar() }}
-    {% endif %}
+    {% for item in bulma_layout %}
+      {% if item.type == "main" %}
+        <main class="column content is-{{ item.size }}">
+        {% block body %} {% endblock %}
+        </main>
+      {% elif item.type == "sidebar" %}
+        {{ bulma_sidebar(item.size) }}
+      {% elif item.type == "space" %}
+        <div class="column is-{{ item.size }}"></div>
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
 {% endblock %}

@@ -42,6 +42,7 @@ html_theme_options = {
             "url": "https://github.com/atsphinx/bulma",
         }
     ],
+    "navbar_show_hidden_toctree": True,
     "layout": {
         "**": [
             {

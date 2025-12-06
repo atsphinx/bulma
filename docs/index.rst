@@ -30,6 +30,7 @@ Features and usage
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    theme
    elements/index

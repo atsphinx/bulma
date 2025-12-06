@@ -78,6 +78,12 @@ Options
 
    Addtional links on navbar.
 
+.. confval:: navbar_show_hidden_toctree
+   :type: bool
+   :default: ``False``
+
+   .. todo:: (TBD)
+
 .. confval:: show_theme_credit
    :type: bool
    :default: ``True``

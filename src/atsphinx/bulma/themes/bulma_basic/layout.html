@@ -29,7 +29,7 @@
 
   <div id="site-navbar" class="navbar-menu">
     <div class="navbar-start">
-      {% for tree in root_toctree_dict() %}
+      {% for tree in root_toctree_dict(theme_navbar_show_hidden_toctree) %}
       <a class="navbar-item" href={{ tree.uri }}>
         {{ tree.title }}
       </a>

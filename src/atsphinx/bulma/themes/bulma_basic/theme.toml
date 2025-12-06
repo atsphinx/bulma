@@ -20,6 +20,7 @@ logo_description = ""
 navbar_links = []
 navbar_search = false
 navbar_icons = []
+navbar_show_hidden_toctree = false
 show_theme_credit = true
 
 [options.layout]

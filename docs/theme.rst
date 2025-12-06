@@ -83,3 +83,9 @@ Options
    :default: ``True``
 
    Please set ``False`` if you don't want to render credit of this extension.
+
+.. confval:: layout
+   :type: list[dict]
+   :default: ``{"**": [ {"type": "sidebar", "size": 2}, {"type": "main", "size": 10} ] }``
+
+   Layout of conten per page.

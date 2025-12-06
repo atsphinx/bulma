@@ -24,6 +24,7 @@ def setup(app: Sphinx):  # noqa: D103
     app.connect("builder-inited", append_styling_filters)
     app.connect("html-page-context", register_root_toctree_dict)
     app.setup_extension("atsphinx.bulma")
+    app.setup_extension("atsphinx.bulma.layout.hero")
     return {
         "version": __version__,
         "env_version": 1,

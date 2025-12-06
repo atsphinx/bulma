@@ -24,7 +24,8 @@ here = Path(__file__).parent
 
 def append_styling_filters(app: Sphinx):
     """Append custom filters to update content for enabling Bulma styles."""
-    app.builder.templates.environment.filters["set_menu_list"] = menu.append_style
+    if hasattr(app.builder, "templates"):
+        app.builder.templates.environment.filters["set_menu_list"] = menu.append_style
 
 
 def select_layout(

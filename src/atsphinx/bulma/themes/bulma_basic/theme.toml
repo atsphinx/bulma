@@ -17,9 +17,13 @@ bulmaswatch_version = "0.8.1"
 color_mode = ""
 logo_class = "is-128x128"
 logo_description = ""
-sidebar_position = "left"
-sidebar_size = 2
 navbar_links = []
 navbar_search = false
 navbar_icons = []
 show_theme_credit = true
+
+[options.layout]
+"**" = [
+    {type = "sidebar", size = 2},
+    {type = "main", size = 10},
+]

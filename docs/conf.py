@@ -46,28 +46,13 @@ html_theme_options = {
     "navbar_show_hidden_toctree": True,
     "layout": {
         "index": [
-            {
-                "type": "space",
-                "size": 1,
-            },
-            {
-                "type": "main",
-                "size": 10,
-            },
-            {
-                "type": "space",
-                "size": 1,
-            },
+            {"type": "space", "size": 1},
+            {"type": "main", "size": 10},
+            {"type": "space", "size": 1},
         ],
         "**": [
-            {
-                "type": "main",
-                "size": 10,
-            },
-            {
-                "type": "sidebar",
-                "size": 2,
-            },
+            {"type": "main", "size": 10},
+            {"type": "sidebar", "size": 2},
         ],
     },
 }

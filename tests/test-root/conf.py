@@ -3,3 +3,4 @@
 extensions = [
     "atsphinx.bulma",
 ]
+html_theme = "bulma-basic"

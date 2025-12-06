@@ -1,10 +1,11 @@
 Test doc for atsphinx-bulma
 ===========================
 
-.. toctree::
-   :hidden:
+.. bulma-hero::
+   :title: Hero 1
 
-   hero
+.. bulma-hero::
+   :title: Hero 2
 
 Section title
 -------------

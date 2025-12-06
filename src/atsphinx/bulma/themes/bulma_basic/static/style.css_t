@@ -24,7 +24,7 @@ footer.footer, div.footer {
 }
 
 /* For contents */
-section {
+section:not(.hero) {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }

@@ -87,6 +87,9 @@
 {% endblock %}
 
 {%- block content %}
+{% if bulma_hero -%}
+{{ bulma_hero }}
+{%- endif %}
 <div class="section">
   <div class="columns">
     {% for item in bulma_layout %}

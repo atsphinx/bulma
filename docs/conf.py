@@ -54,6 +54,7 @@ html_css_files = [
 html_title = f"{project} v{release}"
 html_static_path = ["_static"]
 html_sidebars = {
+    "index": [],
     "**": [
         "sidebar/logo.html",
         "sidebar/line.html",
@@ -61,7 +62,7 @@ html_sidebars = {
         "sidebar/searchbox.html",
         "sidebar/localtoc.html",
         "navigation.html",
-    ]
+    ],
 }
 
 # -- Options for extensions

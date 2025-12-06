@@ -2,13 +2,14 @@
 
 from __future__ import annotations
 
+import fnmatch
+import re
 from pathlib import Path
 from typing import TYPE_CHECKING, Union
 
 from bs4 import BeautifulSoup, Tag
 from docutils import nodes
 from sphinx.application import Sphinx
-from sphinx.util.matching import Matcher
 
 from ... import __version__
 from ...components import menu
@@ -34,6 +35,7 @@ def select_layout(
     doctree: nodes.document | None = None,
 ):
     """Pick layout of target page."""
+    # TODO: Test it!!
     DEFAULT_LAYOUT = {
         "**": [
             {"type": "sidebar", "size": 2},
@@ -42,9 +44,10 @@ def select_layout(
     }
     layouts = app.config.html_theme_options.get("layout", DEFAULT_LAYOUT)
     for key, settings in layouts.items():
-        matcher = Matcher(key)
-        if matcher.match(pagename):
+        regex = re.compile(fnmatch.translate(key))
+        if regex.match(pagename):
             context["bulma_layout"] = settings
+            break
 
 
 def setup(app: Sphinx):  # noqa: D103

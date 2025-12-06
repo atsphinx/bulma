@@ -42,6 +42,7 @@ html_theme_options = {
             "url": "https://github.com/atsphinx/bulma",
         }
     ],
+    "navbar_search": True,
     "navbar_show_hidden_toctree": True,
     "layout": {
         "index": [
@@ -83,7 +84,6 @@ html_sidebars = {
         "sidebar/logo.html",
         "sidebar/line.html",
         "select-lang.html",
-        "sidebar/searchbox.html",
         "sidebar/localtoc.html",
         "navigation.html",
     ],

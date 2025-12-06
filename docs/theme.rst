@@ -88,4 +88,32 @@ Options
    :type: list[dict]
    :default: ``{"**": [ {"type": "sidebar", "size": 2}, {"type": "main", "size": 10} ] }``
 
-   Layout of conten per page.
+   Layout of conten per page. See :ref:`layout-values`.
+
+.. _layout-values:
+
+Layout values
+=============
+
+You can manage layout of content layer by configure ``layout`` in ``html_theme_options``.
+
+.. todo:: TBD
+
+.. code-block:: json
+
+   {
+     "**": [
+       {
+         "type": "sidebar",
+         "size": 2
+       },
+       {
+         "type": "main",
+         "size": 8
+       },
+       {
+         "type": "space",
+         "size": 2
+       },
+     ]
+   }

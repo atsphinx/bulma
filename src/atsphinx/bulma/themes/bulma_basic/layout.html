@@ -96,6 +96,8 @@
         </main>
       {% elif item.type == "sidebar" %}
         {{ bulma_sidebar(item.size) }}
+      {% elif item.type == "space" %}
+        <div class="column is-{{ item.size }}"></div>
       {% endif %}
     {% endfor %}
   </div>

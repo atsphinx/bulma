@@ -45,12 +45,16 @@ html_theme_options = {
     "layout": {
         "**": [
             {
-                "type": "main",
-                "size": 9,
+                "type": "space",
+                "size": 1,
             },
             {
-                "type": "sidebar",
-                "size": 3,
+                "type": "main",
+                "size": 10,
+            },
+            {
+                "type": "space",
+                "size": 1,
             },
         ]
     },

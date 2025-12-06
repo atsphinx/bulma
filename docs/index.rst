@@ -2,6 +2,11 @@
 atsphinx-bulma
 ==============
 
+.. bulma-hero::
+   :title: Bulma design for Sphinx documentation
+   :subtitle: atsphinx-bulma provides Bulma based design and custom components.
+   :classes: has-text-centered is-primary is-padding-ml
+
 Overview
 ========
 

@@ -44,7 +44,7 @@ html_theme_options = {
     ],
     "navbar_show_hidden_toctree": True,
     "layout": {
-        "**": [
+        "index": [
             {
                 "type": "space",
                 "size": 1,
@@ -57,7 +57,17 @@ html_theme_options = {
                 "type": "space",
                 "size": 1,
             },
-        ]
+        ],
+        "**": [
+            {
+                "type": "main",
+                "size": 10,
+            },
+            {
+                "type": "sidebar",
+                "size": 2,
+            },
+        ],
     },
 }
 html_css_files = [
@@ -69,7 +79,6 @@ html_css_files = [
 html_title = f"{project} v{release}"
 html_static_path = ["_static"]
 html_sidebars = {
-    "index": [],
     "**": [
         "sidebar/logo.html",
         "sidebar/line.html",

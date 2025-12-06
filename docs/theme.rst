@@ -60,18 +60,6 @@ Options
 
    Description text under logo image on sideber.
 
-.. confval:: sidebar_position
-   :type: Literal["left", "right"]
-   :default: ``"left"``
-
-   Which sidebar renders on content. Set ``'left'`` or ``'right'``.
-
-.. confval:: sideber_size
-   :type: int
-   :default: ``2``
-
-   Column size of sidebar.
-
 .. confval:: navbar_icons
    :type: list[dict]
    :default: ``[]``

@@ -14,5 +14,5 @@ packages:
   - name: astral-sh/uv@0.9.25
   - name: evilmartians/lefthook@v2.0.15
   - name: go-task/task@v3.46.4
-  - name: oven-sh/bun@bun-v1.3.5
+  - name: oven-sh/bun@bun-v1.3.6
   - name: biomejs/biome@cli/v1.9.4

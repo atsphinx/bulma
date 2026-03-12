@@ -12,7 +12,7 @@ registries:
     ref: v4.481.0 # renovate: depName=aquaproj/aqua-registry
 packages:
   - name: astral-sh/uv@0.10.9
-  - name: evilmartians/lefthook@v2.1.3
+  - name: evilmartians/lefthook@v2.1.4
   - name: go-task/task@v3.49.1
   - name: oven-sh/bun@bun-v1.3.10
   - name: biomejs/biome@cli/v1.9.4

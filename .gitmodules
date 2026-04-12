@@ -1,0 +1,3 @@
+[submodule "sample/sphinx-themes"]
+	path = sample/sphinx-themes
+	url = https://github.com/sphinx-themes/sphinx-themes.org

@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, TypedDict
+from typing import TYPE_CHECKING, NamedTuple, TypedDict
 
 from docutils import nodes
+from sphinx import addnodes
 from sphinx.locale import admonitionlabels
 
 if TYPE_CHECKING:
@@ -30,6 +31,11 @@ class MessageClassMap(TypedDict):
     tip: str
     warning: str
     # Sphinx extra admonitions
+    seealso: str
+    versionadded: str
+    versionchanged: str
+    deprecated: str
+    versionremoved: str
     Todo: str
 
 
@@ -45,6 +51,11 @@ DEFAULT_MESSAGE_CLASSES: MessageClassMap = {
     "tip": "is-info",
     "warning": "is-warning",
     # Sphinx extra admonitions
+    "seealso": "is-info",
+    "versionadded": "is-success",
+    "versionchanged": "is-info",
+    "deprecated": "is-warning",
+    "versionremoved": "is-danger",
     "Todo": "is-link",
 }
 
@@ -71,6 +82,23 @@ def visit_admonition(  # noqa: D103
 
 def depart_admonition(  # noqa: D103
     self: HTML5Translator, node: Optional[nodes.admonition] = None
+) -> None:
+    self.body.append("  </div>")
+    self.body.append("</article>")
+
+
+def visit_versionmodified(  # noqa: D103
+    self: HTML5Translator, node: addnodes.versionmodified, name: str = ""
+) -> None:
+    message_classes: MessageClassMap = self.builder.app.config.bulma_message_classes
+    fallback_class = self.builder.app.config.bulma_message_fallback
+    msg_class = message_classes.get(node["type"], fallback_class)
+    self.body.append(f'<article class="message {msg_class}">')
+    self.body.append('  <div class="message-body">')
+
+
+def depart_versionmodified(  # noqa: D103
+    self: HTML5Translator, node: Optional[addnodes.versionmodified], name: str = ""
 ) -> None:
     self.body.append("  </div>")
     self.body.append("</article>")

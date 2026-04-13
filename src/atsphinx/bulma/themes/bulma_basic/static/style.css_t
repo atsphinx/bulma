@@ -3,6 +3,10 @@
   @import "https://cdn.jsdelivr.net/npm/bulmaswatch@{{ theme_bulmaswatch_version }}/{{ theme_bulmaswatch }}/bulmaswatch.min.css";
 {%- endif %}
 
+:root {
+  --atsphinx-bulma-default-font-size: 1.25em;
+  --atsphinx-bulma-sub-font-size: 0.8em;
+}
 
 /* For sticky footer */
 body {
@@ -14,7 +18,7 @@ section[id] {
   scroll-margin-top: var(--bulma-navbar-height);
 }
 p {
-  font-size: 1.25em;
+  font-size: var(--atsphinx-bulma-default-font-size);
 }
 
 .navbar.is-sticky {
@@ -106,4 +110,37 @@ img.align-default, figure.align-default, .figure.align-default {
 
 .align-right {
     text-align: right;
+}
+
+/** Code-block */
+.highlight-default, .docutils.container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.highlight pre {
+  font-size: 1em;
+}
+
+/** List components */
+dt {
+  font-size: var(--atsphinx-bulma-default-font-size);
+  font-weight: bold;
+  .classifier:before {
+    content: ":";
+    margin-right: 0.1rem;
+    margin-right: 0.5rem;
+    font-style: normal;
+    display: inline-block;
+  }
+  .classifier {
+    font-weight: normal;
+    font-style: italic;
+  }
+}
+dl.glossary dd {
+  margin-bottom: 1rem;
+}
+
+figcaption p {
+  font-size: var(--atsphinx-bulma-sub-font-size);
 }

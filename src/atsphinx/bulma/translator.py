@@ -12,6 +12,7 @@ class BulmaTranslator(HTML5Translator):  # noqa: D101
     def visit_table(self, node):
         """Append ``table`` class of Bulma."""
         node.set_class("table")
+        node.set_class("is-bordered")
         super().visit_table(node)
 
     @override

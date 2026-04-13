@@ -13,6 +13,10 @@ body {
 section[id] {
   scroll-margin-top: var(--bulma-navbar-height);
 }
+p {
+  font-size: 1.25em;
+}
+
 .navbar.is-sticky {
   position: sticky;
   top: 0;

@@ -26,7 +26,7 @@ tasks:
     vars:
       TARGET: '{{index .MATCH 0}}'
     cmds:
-      - '{{.RUN_PYTHON}} sphinx-build {{.SPHINX_OPTIONS}} -b {{.TARGET}} {{.SPHINX_SOURCE_DIR}} {{.SPHINX_OUTPUT_DIR}}'
+      - '{{.RUN_PYTHON}} sphinx-build {{.SPHINX_OPTIONS}} -M {{.TARGET}} {{.SPHINX_SOURCE_DIR}} {{.SPHINX_OUTPUT_DIR}}'
   build:
     desc: 'Make docs (default target)'
     deps:

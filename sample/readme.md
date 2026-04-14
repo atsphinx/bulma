@@ -1,4 +1,4 @@
-# Sample review directory
+# Sample documentation directory
 
-This is sample documentation using `sample-docs` of [Sphinx Themes Gallery](https://sphinx-themes.org/).
+This sample documentation uses `sample-docs` from the [Sphinx Themes Gallery](https://sphinx-themes.org/).
 

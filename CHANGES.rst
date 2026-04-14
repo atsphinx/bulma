@@ -2,6 +2,34 @@
 Change logs
 ===========
 
+v0.4.2
+======
+
+:Date: 2026-04-15 (Asia/Tokyo)
+
+Features
+--------
+
+* Support rendering Sphinx's version-related admonitions with Bulma message styles.
+
+  * Covered admonitions: ``seealso``, ``versionadded``, ``versionchanged``, ``deprecated``, ``versionremoved``.
+
+* Improve styling for several components.
+
+  * Code block: add vertical margins.
+  * Definition list (``dt``/``dd``): apply font size, bold weight, and classifier style.
+  * Paragraph font size is now driven by a CSS variable (``--atsphinx-bulma-default-font-size``).
+
+Fixes
+-----
+
+* Fix CSS selector that applies scroll margin to section headings.
+
+Others
+------
+
+* Add sample documentation using Sphinx Themes Gallery.
+
 v0.4.1
 ======
 

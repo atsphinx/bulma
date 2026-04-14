@@ -24,9 +24,9 @@ class BulmaTranslator(HTML5Translator):  # noqa: D101
         messages.depart_admonition(self, node)
 
     @override
-    def visit_versionmodified(self, node, name=""):
-        messages.visit_versionmodified(self, node, name)
+    def visit_versionmodified(self, node):
+        messages.visit_versionmodified(self, node)
 
     @override
-    def depart_versionmodified(self, node=None):
+    def depart_versionmodified(self, node):
         messages.depart_versionmodified(self, node)

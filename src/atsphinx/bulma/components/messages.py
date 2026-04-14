@@ -88,7 +88,8 @@ def depart_admonition(  # noqa: D103
 
 
 def visit_versionmodified(  # noqa: D103
-    self: HTML5Translator, node: addnodes.versionmodified, name: str = ""
+    self: HTML5Translator,
+    node: addnodes.versionmodified,
 ) -> None:
     message_classes: MessageClassMap = self.builder.app.config.bulma_message_classes
     fallback_class = self.builder.app.config.bulma_message_fallback
@@ -98,7 +99,8 @@ def visit_versionmodified(  # noqa: D103
 
 
 def depart_versionmodified(  # noqa: D103
-    self: HTML5Translator, node: Optional[addnodes.versionmodified], name: str = ""
+    self: HTML5Translator,
+    node: addnodes.versionmodified,
 ) -> None:
     self.body.append("  </div>")
     self.body.append("</article>")

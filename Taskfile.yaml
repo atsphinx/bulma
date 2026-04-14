@@ -8,7 +8,7 @@ tasks:
   setup:
     desc: 'Setup workspace'
     cmds:
-      - 'uv sync --frozen --all-extras'
+      - 'uv sync --frozen --all-extras -v'
       - 'lefthook install'
   verify:
     desc: 'Verify environment by all procs'

@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: "./.github/actions/setup-aqua"
-      - uses: flatt-security/setup-takumi-guard-pypi@v1
+      - uses: attakei-lab/setup-takumi-guard-pypi@attakei-patch-1-uv
       - name: Set up workspace
         run: |
           task setup

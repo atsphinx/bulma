@@ -19,6 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: "./.github/actions/setup-aqua"
+      - uses: flatt-security/setup-takumi-guard-pypi@v1
       - name: Set up workspace
         run: |
           uv sync --group=docs --frozen

@@ -127,7 +127,7 @@ dt {
   font-weight: bold;
   .classifier:before {
     content: ":";
-    margin-right: 0.1rem;
+    margin-left: 0.1rem;
     margin-right: 0.5rem;
     font-style: normal;
     display: inline-block;

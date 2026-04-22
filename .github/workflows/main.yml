@@ -18,6 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: "./.github/actions/setup-aqua"
+      - uses: flatt-security/setup-takumi-guard-pypi@v1.0.1
       - name: Set up workspace
         run: |
           task setup
@@ -38,6 +39,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: "./.github/actions/setup-aqua"
+      - uses: flatt-security/setup-takumi-guard-pypi@v1.0.1
       - name: "Set up workspace"
         run: |
           echo '${{ matrix.python-version }}' > .python-version
@@ -57,6 +59,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: "./.github/actions/setup-aqua"
+      - uses: flatt-security/setup-takumi-guard-pypi@v1.0.1
       - name: "Set up workspace"
         run: |
           uv sync --all-extras --all-groups
@@ -68,6 +71,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: "./.github/actions/setup-aqua"
+      - uses: flatt-security/setup-takumi-guard-pypi@v1.0.1
       - name: Build package
         run: |
           uv build

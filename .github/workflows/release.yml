@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: './.github/actions/setup-aqua'
-      - uses: flatt-security/setup-takumi-guard-pypi@v1
+      - uses: flatt-security/setup-takumi-guard-pypi@733047c120b6377fa05fb77f714df8d8cd3a41a9 # v1.0.1
       - name: Build package
         run: |
           uv build

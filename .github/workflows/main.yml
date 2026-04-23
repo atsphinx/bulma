@@ -24,7 +24,7 @@ jobs:
       - uses: "./.github/actions/setup-aqua"
       - uses: flatt-security/setup-takumi-guard-pypi@v1.0.1
         with:
-          bot-id: ${{ secrets.TAKUMI_GUARD_BOT_TOKEN }}
+          bot-id: ${{ vars.TAKUMI_GUARD_BOT_ID }}
       - name: Set up workspace
         run: |
           task setup
@@ -47,7 +47,7 @@ jobs:
       - uses: "./.github/actions/setup-aqua"
       - uses: flatt-security/setup-takumi-guard-pypi@v1.0.1
         with:
-          bot-id: ${{ secrets.TAKUMI_GUARD_BOT_TOKEN }}
+          bot-id: ${{ vars.TAKUMI_GUARD_BOT_ID }}
       - name: "Set up workspace"
         run: |
           echo '${{ matrix.python-version }}' > .python-version
@@ -69,7 +69,7 @@ jobs:
       - uses: "./.github/actions/setup-aqua"
       - uses: flatt-security/setup-takumi-guard-pypi@v1.0.1
         with:
-          bot-id: ${{ secrets.TAKUMI_GUARD_BOT_TOKEN }}
+          bot-id: ${{ vars.TAKUMI_GUARD_BOT_ID }}
       - name: "Set up workspace"
         run: |
           uv sync --all-extras --all-groups
@@ -83,7 +83,7 @@ jobs:
       - uses: "./.github/actions/setup-aqua"
       - uses: flatt-security/setup-takumi-guard-pypi@v1.0.1
         with:
-          bot-id: ${{ secrets.TAKUMI_GUARD_BOT_TOKEN }}
+          bot-id: ${{ vars.TAKUMI_GUARD_BOT_ID }}
       - name: Build package
         run: |
           uv build

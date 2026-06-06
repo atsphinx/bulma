@@ -6,7 +6,7 @@ pre-commit:
   commands:
     ruff:
       glob: '*.py'
-      run: 'uvx ruff format {staged_files}'
+      run: 'uv run ruff format {staged_files}'
       stage_fixed: true
     ty:
       glob: '*.py'

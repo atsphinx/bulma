@@ -3,11 +3,10 @@
 import sys
 from pathlib import Path
 
+from atsphinx.bulma import __version__ as version
 from docutils import nodes
 from docutils.parsers.rst import Directive
 from docutils.statemachine import StringList
-
-from atsphinx.bulma import __version__ as version
 
 # -- Project information
 project = "atsphinx-bulma using sphinx-themes.org"

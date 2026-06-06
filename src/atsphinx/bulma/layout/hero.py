@@ -38,7 +38,7 @@ template = jinja2.Template(
 )
 
 
-class hero(nodes.General, nodes.Element):
+class hero(nodes.General, nodes.Element):  # noqa: D101
     pass
 
 
@@ -67,11 +67,11 @@ class HeroDirective(SphinxDirective):
         ]
 
 
-def skip_node(self: HTMLTranslator, node: hero):
+def skip_node(self: HTMLTranslator, node: hero):  # noqa: D103
     raise nodes.SkipNode
 
 
-def register_hero_html(
+def register_hero_html(  # noqa: D103
     app: Sphinx,
     pagename: str,
     templatename: str,

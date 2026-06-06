@@ -74,6 +74,7 @@ dev = [
     { name = "atsphinx-mini18n" },
     { name = "esbonio" },
     { name = "pytest" },
+    { name = "ruff" },
     { name = "sphinx-autobuild" },
     { name = "sphinx-intl" },
     { name = "sphinx-toolbox" },
@@ -86,10 +87,8 @@ docs = [
     { name = "sphinx-toolbox" },
 ]
 lint = [
-    { name = "ty" },
-]
-litn = [
     { name = "ruff" },
+    { name = "ty" },
 ]
 test = [
     { name = "pytest" },
@@ -108,6 +107,7 @@ dev = [
     { name = "atsphinx-mini18n" },
     { name = "esbonio" },
     { name = "pytest" },
+    { name = "ruff", specifier = ">=0.15.15" },
     { name = "sphinx-autobuild" },
     { name = "sphinx-intl" },
     { name = "sphinx-toolbox", specifier = ">=3.8.1" },
@@ -119,8 +119,10 @@ docs = [
     { name = "sphinx-intl" },
     { name = "sphinx-toolbox", specifier = ">=3.8.1" },
 ]
-lint = [{ name = "ty", specifier = ">=0.0.1a30" }]
-litn = [{ name = "ruff", specifier = ">=0.15.16" }]
+lint = [
+    { name = "ruff", specifier = ">=0.15.15" },
+    { name = "ty", specifier = ">=0.0.1a30" },
+]
 test = [{ name = "pytest" }]
 
 [[package]]

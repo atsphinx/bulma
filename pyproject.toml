@@ -56,6 +56,7 @@ dev = [
     "sphinx-autobuild",
 ]
 lint = [
+    "ruff>=0.15.15",
     "ty>=0.0.1a30",
 ]
 test = [
@@ -66,9 +67,6 @@ docs = [
     "atsphinx-mini18n",
     "sphinx-intl",
     "sphinx-toolbox>=3.8.1",
-]
-litn = [
-    "ruff>=0.15.16",
 ]
 
 [tool.uv]

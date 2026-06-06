@@ -8,7 +8,8 @@ from docutils import nodes
 from sphinx.addnodes import toctree
 
 if TYPE_CHECKING:
-    from typing import Any, Optional
+    from typing import Any
+
     from sphinx.application import Sphinx
 
 
@@ -17,7 +18,7 @@ def register_root_toctree_dict(
     pagename: str,
     templatename: str,
     context: dict[str, Any],
-    doctree: Optional[nodes.document],
+    doctree: nodes.document | None,
 ) -> None:
     """Pass toctree of root for navbar."""
 

@@ -17,7 +17,8 @@ from sphinx.util.docutils import SphinxDirective
 from .. import __version__
 
 if TYPE_CHECKING:
-    from typing import Any, Generator
+    from collections.abc import Generator
+    from typing import Any
 
     from sphinx.application import Sphinx
     from sphinx.writers.html import HTMLTranslator

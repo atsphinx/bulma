@@ -5,9 +5,8 @@ from __future__ import annotations
 import fnmatch
 import re
 from pathlib import Path
-from typing import TYPE_CHECKING, Union
+from typing import TYPE_CHECKING
 
-from bs4 import BeautifulSoup, Tag
 from docutils import nodes
 from sphinx.application import Sphinx
 

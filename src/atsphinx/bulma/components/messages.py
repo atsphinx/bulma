@@ -2,15 +2,13 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, NamedTuple, TypedDict
+from typing import TYPE_CHECKING, TypedDict
 
 from docutils import nodes
 from sphinx import addnodes
 from sphinx.locale import admonitionlabels
 
 if TYPE_CHECKING:
-    from typing import Optional
-
     from sphinx.writers.html5 import HTML5Translator
 
 
@@ -81,7 +79,7 @@ def visit_admonition(  # noqa: D103
 
 
 def depart_admonition(  # noqa: D103
-    self: HTML5Translator, node: Optional[nodes.admonition] = None
+    self: HTML5Translator, node: nodes.admonition | None = None
 ) -> None:
     self.body.append("  </div>")
     self.body.append("</article>")

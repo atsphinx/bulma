@@ -67,6 +67,9 @@ docs = [
     "sphinx-intl",
     "sphinx-toolbox>=3.8.1",
 ]
+litn = [
+    "ruff>=0.15.16",
+]
 
 [tool.uv]
 managed = true

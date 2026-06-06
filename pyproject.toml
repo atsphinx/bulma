@@ -74,8 +74,11 @@ litn = [
 [tool.uv]
 managed = true
 
+[tool.ruff]
+exclude = ["sample/sphinx-themes"]
+
 [tool.ruff.lint]
-select = ["C90", "D", "E", "F", "I", "W"]
+select = ["C90", "D", "E", "F", "I", "UP", "W"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "pep257"

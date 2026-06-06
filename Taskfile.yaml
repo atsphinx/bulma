@@ -26,6 +26,11 @@ tasks:
     cmds:
       - 'age {{.COMMAND}}'
       - 'uv sync --all-extras'  # To write out as lock-file
+  refactor:
+    desc: 'Refactor all sources by Ruff'
+    cmds:
+      - '{{.RUN_PYTHON}} ruff format'
+      - '{{.RUN_PYTHON}} ruff check --fix'
 
 includes:
   docs: './docs'

@@ -37,7 +37,7 @@ html_theme_options = {
     "color_mode": "light",
     "bulmaswatch": "pulse",  # This is DEPRECATED!!.
     "logo": {
-        "logo_description": "This is documentation of atsphinx-bulma.",
+        "description": "This is documentation of atsphinx-bulma.",
     },
     "navbar": {
         "icons": [
@@ -47,8 +47,8 @@ html_theme_options = {
                 "url": "https://github.com/atsphinx/bulma",
             }
         ],
-        "navbar_search": True,
-        "navbar_show_hidden_toctree": True,
+        "search": True,
+        "show_hidden_toctree": True,
     },
     "layout": {
         "index": [

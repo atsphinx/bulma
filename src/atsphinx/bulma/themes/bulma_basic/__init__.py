@@ -5,7 +5,7 @@ from __future__ import annotations
 import fnmatch
 import re
 from pathlib import Path
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, TypedDict
 
 from docutils import nodes
 from sphinx.application import Sphinx
@@ -50,9 +50,125 @@ def select_layout(
             break
 
 
+class LinkProperty(TypedDict):
+    """Properties of ``theme_options["navbar"]["links"][]``."""
+
+    title: str
+    """Title text of link."""
+    url: str
+    """URL to go."""
+
+
+class IconProperty(TypedDict):
+    """Properties of ``theme_options["navbar"]["icons"][]``."""
+
+    icon: str
+    """Font awesome class to render icon."""
+    label: str
+    """Label text of icon."""
+    url: str
+    """URL to go."""
+
+
+class LayoutProperty(TypedDict):
+    """Columns property."""
+
+    type: str
+    size: int
+
+
+class BulmaswatchOptions(TypedDict):
+    """Part of options for using Bulmaswatch."""
+
+    theme: str | bool | None
+    """Color theme."""
+    version: str
+    """Version test of Bulmaswatch."""
+
+
+class LogoOptions(TypedDict):
+    """Part of options for logo component."""
+
+    classes: str
+    """Css classes for logo container."""
+
+    description: str
+    """Descriptin text for logo."""
+
+
+class NavbarOptions(TypedDict):
+    """Part of options for navbar component."""
+
+    links: list[LinkProperty]
+    search: bool
+    icons: list[IconProperty]
+    show_hidden_toctree: bool
+
+
+class ThemeOptions(TypedDict):
+    """Options for theme."""
+
+    bulma_version: str
+    bulmaswatch: BulmaswatchOptions | str | None
+    color_mode: str
+    logo: LogoOptions
+    navbar: NavbarOptions
+    show_theme_credit: bool
+    layout: dict[str, list[LayoutProperty]]
+    # Deprecated properties
+    bulmaswatch_version: str
+    logo_class: str
+    logo_description: str
+    navbar_links: list[str]
+    navbar_search: bool
+    navbar_icons: list[IconProperty]
+    navbar_show_hidden_toctree: bool
+
+
+def build_theme_options(app: Sphinx):
+    """Regenerate application's ``html_theme_options``.
+
+    This function has two roles:
+
+    * Add default values into nested properties.
+    * Inject values from deprecated properties.
+    """
+    if app.builder.format != "html":
+        return
+    config = app.config
+    if config.html_theme != "bulma-basic":
+        return
+    user_opts: ThemeOptions = config.html_theme_options
+    opts: ThemeOptions = app.builder.theme._options.copy()
+
+    # bulmaswatch
+    if isinstance(user_opts.get("bulmaswatch", None), str):
+        opts["bulmaswatch"]["theme"] = user_opts["bulmaswatch"]
+    if "bulmaswatch_version" in user_opts:
+        opts["bulmaswatch"]["version"] = user_opts["bulmaswatch_version"]
+    # logo
+    user_opts.setdefault("logo", opts["logo"])
+    if user_opts.get("logo_class", None) is not None:
+        user_opts["logo"]["classes"] = user_opts["logo_class"]
+    if user_opts.get("logo_description", None) is not None:
+        user_opts["logo"]["description"] = user_opts["logo_description"]
+    opts["logo"] = user_opts["logo"]
+    # navbar
+    user_opts.setdefault("navbar", opts["navbar"])
+    for k in {"links", "search", "icons", "show_hidden_toctree"}:
+        key = f"navbar_{k}"
+        if user_opts.get(key, None) is not None:
+            user_opts["navbar"][k] = user_opts[key]
+    opts["navbar"] = user_opts["navbar"]
+
+    # Remap
+    config.html_theme_options = opts
+
+
 def setup(app: Sphinx):  # noqa: D103
     app.add_html_theme("bulma-basic", str(here))
     app.connect("builder-inited", append_styling_filters)
+    app.connect("builder-inited", build_theme_options)
     app.connect("html-page-context", register_root_toctree_dict)
     app.connect("html-page-context", select_layout)
     app.setup_extension("atsphinx.bulma")

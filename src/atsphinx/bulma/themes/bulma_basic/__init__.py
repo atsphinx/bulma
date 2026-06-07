@@ -141,7 +141,7 @@ class ThemeOptions(TypedDict):
 
 
 def build_theme_options(app: Sphinx):
-    """Regenerate application's ``html_theme_options``.
+    """Regenerate builder's ``theme_options``.
 
     This function has two roles:
 

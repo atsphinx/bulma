@@ -153,7 +153,7 @@ def build_theme_options(app: Sphinx):
     config = app.config
     if config.html_theme != "bulma-basic":
         return
-    user_opts: ThemeOptions = config.html_theme_options
+    user_opts: ThemeOptions = config.html_theme_options.copy()
     opts: ThemeOptions = app.builder.theme._options.copy()
     deprecated = set()
 

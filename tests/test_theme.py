@@ -23,7 +23,7 @@ if TYPE_CHECKING:
 )
 def test__fallback_bulmaswatch(app: SphinxTestApp, status: StringIO, warning: StringIO):
     app.build()
-    opts: dict = app.config.html_theme_options
+    opts: dict = app.builder.theme_options
     assert "version" in opts["bulmaswatch"]
     assert opts["bulmaswatch"]["version"] == "0.8.1"
 
@@ -39,7 +39,7 @@ def test__fallback_bulmaswatch(app: SphinxTestApp, status: StringIO, warning: St
 )
 def test__fallback_logo(app: SphinxTestApp, status: StringIO, warning: StringIO):
     app.build()
-    opts: dict = app.config.html_theme_options
+    opts: dict = app.builder.theme_options
     assert isinstance(opts["logo"], dict)
     assert "classes" in opts["logo"]
 
@@ -55,7 +55,7 @@ def test__fallback_logo(app: SphinxTestApp, status: StringIO, warning: StringIO)
 )
 def test__fallback_navbar(app: SphinxTestApp, status: StringIO, warning: StringIO):
     app.build()
-    opts: dict = app.config.html_theme_options
+    opts: dict = app.builder.theme_options
     assert isinstance(opts["navbar"], dict)
     assert opts["navbar"]["search"] is True
     assert "links" in opts["navbar"]

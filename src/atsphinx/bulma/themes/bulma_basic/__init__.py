@@ -188,7 +188,7 @@ def build_theme_options(app: Sphinx):
         )
 
     # Remap
-    config.html_theme_options = opts
+    app.builder.theme_options = opts  # type: ignore[invalid-assignment]
 
 
 def setup(app: Sphinx):  # noqa: D103

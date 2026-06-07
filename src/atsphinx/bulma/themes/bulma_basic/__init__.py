@@ -9,6 +9,7 @@ from typing import TYPE_CHECKING, TypedDict
 
 from docutils import nodes
 from sphinx.application import Sphinx
+from sphinx.util import logging
 
 from ... import __version__
 from ...components import menu
@@ -19,6 +20,7 @@ if TYPE_CHECKING:
 
 
 here = Path(__file__).parent
+logger = logging.getLogger(__name__)
 
 
 def append_styling_filters(app: Sphinx):
@@ -140,18 +142,23 @@ def build_theme_options(app: Sphinx):
         return
     user_opts: ThemeOptions = config.html_theme_options
     opts: ThemeOptions = app.builder.theme._options.copy()
+    deprecated = set()
 
     # bulmaswatch
     if isinstance(user_opts.get("bulmaswatch", None), str):
         opts["bulmaswatch"]["theme"] = user_opts["bulmaswatch"]
+        deprecated.add("bulmaswatch")
     if "bulmaswatch_version" in user_opts:
         opts["bulmaswatch"]["version"] = user_opts["bulmaswatch_version"]
+        deprecated.add("bulmaswatch_version")
     # logo
     user_opts.setdefault("logo", opts["logo"])
     if user_opts.get("logo_class", None) is not None:
         user_opts["logo"]["classes"] = user_opts["logo_class"]
+        deprecated.add("logo_class")
     if user_opts.get("logo_description", None) is not None:
         user_opts["logo"]["description"] = user_opts["logo_description"]
+        deprecated.add("logo_description")
     opts["logo"] = user_opts["logo"]
     # navbar
     user_opts.setdefault("navbar", opts["navbar"])
@@ -159,7 +166,13 @@ def build_theme_options(app: Sphinx):
         key = f"navbar_{k}"
         if user_opts.get(key, None) is not None:
             user_opts["navbar"][k] = user_opts[key]
+            deprecated.add(key)
     opts["navbar"] = user_opts["navbar"]
+
+    if deprecated:
+        logger.warning(
+            f"conf.py uses deprecated values in 'html_theme_options'. migrate them: {', '.join(deprecated)}"
+        )
 
     # Remap
     config.html_theme_options = opts

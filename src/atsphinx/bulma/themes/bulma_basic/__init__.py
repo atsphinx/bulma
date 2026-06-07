@@ -16,7 +16,7 @@ from ...components import menu
 from ...components.navbar import register_root_toctree_dict
 
 if TYPE_CHECKING:
-    from typing import Any
+    from typing import Any, Literal
 
 
 here = Path(__file__).parent
@@ -75,8 +75,10 @@ class IconProperty(TypedDict):
 class LayoutProperty(TypedDict):
     """Columns property."""
 
-    type: str
+    type: Literal["main", "sidebar", "space"]
+    """Type of column."""
     size: int
+    """Size of column. It is necessary to make the total 12."""
 
 
 class BulmaswatchOptions(TypedDict):
@@ -102,21 +104,32 @@ class NavbarOptions(TypedDict):
     """Part of options for navbar component."""
 
     links: list[LinkProperty]
+    """List of link texts rendered on navbar."""
     search: bool
+    """Show search form on navbar."""
     icons: list[IconProperty]
+    """List of icon links rendered on navbar."""
     show_hidden_toctree: bool
+    """It render also hidden toctree."""
 
 
 class ThemeOptions(TypedDict):
     """Options for theme."""
 
     bulma_version: str
+    """Using Bulma's version."""
     bulmaswatch: BulmaswatchOptions | str | None
-    color_mode: str
+    """Options for using Bulmaswatch."""
+    color_mode: Literal["light", "dark"]
+    """Color mode of page."""
     logo: LogoOptions
+    """Options for rendering logo."""
     navbar: NavbarOptions
+    """Options for navbar."""
     show_theme_credit: bool
+    """Display theme credit on footer."""
     layout: dict[str, list[LayoutProperty]]
+    """Column layout settings per pages."""
     # Deprecated properties
     bulmaswatch_version: str
     logo_class: str

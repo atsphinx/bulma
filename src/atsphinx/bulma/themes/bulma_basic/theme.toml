@@ -11,18 +11,54 @@ sidebars = [
 ]
 
 [options]
+# Using Bulma's version.
 bulma_version = "1.0.4"
-bulmaswatch = ""
-bulmaswatch_version = "0.8.1"
+# Color mode. Set "light", "dark" or "" (blank).
 color_mode = ""
-logo_class = "is-128x128"
-logo_description = ""
-navbar_links = []
-navbar_search = false
-navbar_icons = []
-navbar_show_hidden_toctree = false
+# When it set true, footer displays credit of theme.
 show_theme_credit = true
 
+# DEPRECATED: It remap into ``bulmaswatch.version``.
+bulmaswatch_version = "0.8.1"
+# DEPRECATED: It remap into ``logo.classes``.
+logo_class = "is-128x128"
+# DEPRECATED: It remap into ``logo.description``.
+logo_description = ""
+# DEPRECATED: It remap into ``navbar.links``.
+navbar_links = []
+# DEPRECATED: It remap into ``navbar.search``.
+navbar_search = false
+# DEPRECATED: It remap into ``navbar.icons``.
+navbar_icons = []
+# DEPRECATED: It remap into ``navbar.show_hidden_toctree``.
+navbar_show_hidden_toctree = false
+
+# Options to manage Bulmaswatch.
+[options.bulmaswatch]
+# Using theme. If it set false, theme does not use Bulmaswatch.
+theme = false
+# Using Bulmaswatch's version.
+version = "0.8.1"
+
+# Options for logo rendered on sidebar.
+[options.logo]
+# Bulma classes to render logo image.
+classes = "is-128x128"
+# Description text to render under logo image.
+description = ""
+
+# Options for navbar renderd on head of pages.
+[options.navbar]
+# Link texts' settings to render right next to toctree's links.
+links = []
+# When it set true, it render search form on right of navbar.
+search = false
+# Icon links' settings to render on right of navbar.
+icons = []
+# When it set true, it render all toctree links of root-doc.
+show_hidden_toctree = false
+
+# Content layouts per pages.
 [options.layout]
 "**" = [
     {type = "sidebar", size = 2},

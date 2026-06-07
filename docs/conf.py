@@ -35,17 +35,21 @@ html_logo = "https://attakei.net/_static/images/icon-attakei@2x.png"
 html_theme = "bulma-basic"
 html_theme_options = {
     "color_mode": "light",
-    "bulmaswatch": "pulse",
-    "logo_description": "This is documentation of atsphinx-bulma.",
-    "navbar_icons": [
-        {
-            "label": "",
-            "icon": "fa-brands fa-solid fa-github fa-2x",
-            "url": "https://github.com/atsphinx/bulma",
-        }
-    ],
-    "navbar_search": True,
-    "navbar_show_hidden_toctree": True,
+    "bulmaswatch": "pulse",  # This is DEPRECATED!!.
+    "logo": {
+        "logo_description": "This is documentation of atsphinx-bulma.",
+    },
+    "navbar": {
+        "icons": [
+            {
+                "label": "",
+                "icon": "fa-brands fa-solid fa-github fa-2x",
+                "url": "https://github.com/atsphinx/bulma",
+            }
+        ],
+        "navbar_search": True,
+        "navbar_show_hidden_toctree": True,
+    },
     "layout": {
         "index": [
             {"type": "space", "size": 1},

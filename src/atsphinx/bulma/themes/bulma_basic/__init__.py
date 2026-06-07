@@ -97,7 +97,7 @@ class LogoOptions(TypedDict):
     """Css classes for logo container."""
 
     description: str
-    """Descriptin text for logo."""
+    """Description text for logo."""
 
 
 class NavbarOptions(TypedDict):

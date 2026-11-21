@@ -20,7 +20,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: "./.github/actions/setup-aqua"
       - uses: flatt-security/setup-takumi-guard-pypi@v1.0.1
         with:
@@ -43,7 +43,7 @@ jobs:
           - "3.14"
         workspace: ["locked", "latest"]
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: "./.github/actions/setup-aqua"
       - uses: flatt-security/setup-takumi-guard-pypi@v1.0.1
         with:
@@ -65,7 +65,7 @@ jobs:
   doc-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: "./.github/actions/setup-aqua"
       - uses: flatt-security/setup-takumi-guard-pypi@v1.0.1
         with:
@@ -79,7 +79,7 @@ jobs:
   build-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: "./.github/actions/setup-aqua"
       - uses: flatt-security/setup-takumi-guard-pypi@v1.0.1
         with:
